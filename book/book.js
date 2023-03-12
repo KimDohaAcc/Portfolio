@@ -19,7 +19,7 @@ searchBox.addEventListener("submit", e => {
     if (firstCheck) {
         const nextButton = document.createElement("button");
         nextButton.setAttribute("class", "nextButton");
-        nextButton.addEventListener("click", e =>{
+        nextButton.addEventListener("click", e => {
             searchRequest(searchText, ++pageNum);
         });
 

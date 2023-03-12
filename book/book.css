@@ -3,12 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-size : 10pt;
+    font-size: 10pt;
 }
 
 .main {
     display: flex;
-    flex-flow : wrap column;
+    flex-flow: wrap column;
     justify-content: center;
     align-items: center;
 }
@@ -17,16 +17,16 @@ h1 {
     text-align: center;
 }
 
-input[type="image"]{
+input[type="image"] {
     width: 5vw;
     height: auto;
-    
+
 }
 
 header {
     height: 30vh;
     display: flex;
-    flex-flow : wrap column;
+    flex-flow: wrap column;
     justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
@@ -38,8 +38,8 @@ header {
 }
 
 .search_icon {
-    width : 5vh;
-    height : 5vh
+    width: 5vh;
+    height: 5vh
 }
 
 footer {
@@ -86,22 +86,24 @@ section {
     text-align: center;
 }
 
-.book-description{
-    font-size : 6pt;
+.book-description {
+    font-size: 6pt;
 }
 
 .price {
-    color : cornflowerblue;
+    color: cornflowerblue;
     font-weight: bold;
 }
 
-.price, .author, .publisher {
+.price,
+.author,
+.publisher {
     font-size: 8pt;
 }
 
 .logo {
     height: 100px;
-    
+
 }
 
 .nextButton {
