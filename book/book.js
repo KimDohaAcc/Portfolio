@@ -11,15 +11,22 @@ const searchBox = document.querySelector(".search-box");
 const footer = document.querySelector("footer");
 const searchImg = document.querySelector(".search-img")
 
-const page = document.createElement("span");
-page.setAttribute("class", "page");
-page.innerText = `${pageNum}`;
-
-footer.append(page);
-
+let firstCheck = true;
 searchBox.addEventListener("submit", e => {
     e.preventDefault(); // submit의 기본 동작 무시
     searchImg.setAttribute("style", "display : none");
+
+    if (firstCheck) {
+        const nextButton = document.createElement("button");
+        nextButton.setAttribute("class", "nextButton");
+        nextButton.addEventListener("click", e =>{
+            searchRequest(searchText, ++pageNum);
+        });
+
+        footer.append(nextButton);
+        firstCheck = false;
+    }
+
     const searchText = `${query.value}`;
     if (searchText !== "") {
         pageNum = 1;
@@ -27,11 +34,9 @@ searchBox.addEventListener("submit", e => {
     }
 });
 
-function searchRequest(searchText) {
-    console.log(searchText);
-
+function searchRequest(searchText, pageNum) {
     $.ajax({
-        "url": `http://dapi.kakao.com/v3/search/book?query=${searchText}&page=${pageNum++}&size=16&target=title`,
+        "url": `http://dapi.kakao.com/v3/search/book?query=${searchText}&page=${pageNum}&size=25&target=title`,
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -68,25 +73,25 @@ function printPage(response) {
 
         h4.innerText = `${response.documents[i].title}`;
         const description = `${response.documents[i].contents}`;
-        if (description.length >= 10) {
-            p1.innerText = description.substring(0, 10) + "...";
+        if (description.length >= 15) {
+            p1.innerText = description.substring(0, 15) + "...";
         }
 
         else {
             p1.innerText = description;
         }
-        span1.innerText = `${response.documents[i].price}`;;
-        span2.innerText = `${response.documents[i].authors[0]}`;
+        span1.innerText = `${response.documents[i].price}` + "원";;
+        span2.innerText = `${response.documents[i].authors[0]}` + " | ";
         span3.innerText = `${response.documents[i].publisher}`;
 
 
         div.append(img);
         div.append(h4);
-        div.append(p1);
-        div.append(span1);
         p2.append(span2);
         p2.append(span3);
         div.append(p2);
+        div.append(span1);
+        div.append(p1);
 
         container.append(div);
     }
