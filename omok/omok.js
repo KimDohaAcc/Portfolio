@@ -144,3 +144,9 @@ function checkCross() {
     }
   }
 }
+
+function reset(){
+  turn = 1;
+  win = 0;
+  location.reload();
+}

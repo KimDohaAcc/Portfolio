@@ -9,32 +9,38 @@ const query = document.querySelector(".query");
 const container = document.querySelector(".container");
 const searchBox = document.querySelector(".search-box");
 const footer = document.querySelector("footer");
-const searchImg = document.querySelector(".search-img")
+const searchImg = document.querySelector(".search-img");
 
 let firstCheck = true;
 searchBox.addEventListener("submit", e => {
   e.preventDefault(); // submit의 기본 동작 무시
+  container.innerHTML = "";
+  pageNum = 1;
+
   searchImg.setAttribute("style", "display : none");
 
   if (firstCheck) {
+    const page = document.createElement("p");
+    page.setAttribute("class", "page");
+    page.innerText = `${pageNum}/5`;
     const nextButton = document.createElement("button");
     nextButton.setAttribute("class", "nextButton");
     nextButton.addEventListener("click", e => {
-      searchRequest(searchText, ++pageNum);
+      page.innerText = `${++pageNum}`;
+      searchRequest(`${query.value}`);
     });
 
     footer.append(nextButton);
-    firstCheck = false;
+    footer.append(page);
   }
 
   const searchText = `${query.value}`;
   if (searchText !== "") {
-    pageNum = 1;
     searchRequest(searchText);
   }
 });
 
-function searchRequest(searchText, pageNum) {
+function searchRequest(searchText) {
   $.ajax({
     "url": `https://dapi.kakao.com/v3/search/book?query=${searchText}&page=${pageNum}&size=25&target=title`,
     "method": "GET",
@@ -42,7 +48,7 @@ function searchRequest(searchText, pageNum) {
     "headers": {
       "Authorization": "KakaoAK 205762e8ca1e0563194b28ba858ae453"
     },
-  }).done(function(response) {
+  }).done(function (response) {
     console.log(response);
     printPage(response);
   });
@@ -51,6 +57,14 @@ function searchRequest(searchText, pageNum) {
 
 function printPage(response) {
   for (let i = 0; i < response.documents.length; i++) {
+    try {
+      if (`${response.documents[i].thumbnail}` === "") {
+        continue;
+      }
+    } catch (error) {
+      continue;
+    }
+
     const div = document.createElement("div");
     const img = document.createElement("img");
     const h4 = document.createElement("h4");
@@ -59,7 +73,6 @@ function printPage(response) {
     const p2 = document.createElement("p");
     const span2 = document.createElement("span");
     const span3 = document.createElement("span");
-
 
     div.setAttribute("class", "result-card");
     img.setAttribute("class", "book-img");
@@ -92,7 +105,6 @@ function printPage(response) {
     div.append(p2);
     div.append(span1);
     div.append(p1);
-
     container.append(div);
   }
   // 페이지 정보 변수로 빼기
