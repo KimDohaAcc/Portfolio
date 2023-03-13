@@ -1,50 +1,28 @@
-<<<<<<< HEAD
 * {
     padding: 0;
     margin: 0;
-=======
-*{
-    padding : 0;
-    margin : 0;
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 .container {
     display: flex;
-<<<<<<< HEAD
     flex-flow: wrap column;
-=======
-    flex-flow : wrap column;
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
     justify-content: center;
     align-items: center;
     width: auto;
     height: auto;
 }
 
-<<<<<<< HEAD
 h1 {
-=======
-h1{
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
     margin: 20px;
 }
 
 table {
     display: flex;
-<<<<<<< HEAD
     flex-flow: wrap column;
     align-items: center;
 }
 
 #tbody-1 {
-=======
-    flex-flow : wrap column;
-    align-items: center;
-}
-
-#tbody-1{
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
     position: absolute;
     margin-top: 15px;
     margin-left: 30px;
@@ -52,20 +30,12 @@ table {
 
 .td2 {
     background-color: burlywood;
-<<<<<<< HEAD
     border: solid 1px black;
-=======
-    border : solid 1px black;
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 .td1 {
     /* border : solid 1px; */
-<<<<<<< HEAD
     margin: 1px;
-=======
-    margin : 1px;
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 td {
@@ -75,18 +45,10 @@ td {
 
 tr {
     display: flex;
-<<<<<<< HEAD
     flex-flow: wrap row;
-=======
-    flex-flow : wrap row;
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 .baduk-img {
     width: 30px;
     height: 30px;
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412

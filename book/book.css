@@ -4,19 +4,13 @@
     margin: 0;
     padding: 0;
     font-size: 10pt;
-<<<<<<< HEAD
     font-size: 10pt;
-=======
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 .main {
     display: flex;
     flex-flow: wrap column;
-<<<<<<< HEAD
     flex-flow: wrap column;
-=======
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
     justify-content: center;
     align-items: center;
 }
@@ -28,20 +22,13 @@ h1 {
 input[type="image"] {
     width: 5vw;
     height: auto;
-<<<<<<< HEAD
-=======
-
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 header {
     height: 30vh;
     display: flex;
     flex-flow: wrap column;
-<<<<<<< HEAD
     flex-flow: wrap column;
-=======
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
     justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
@@ -54,11 +41,7 @@ header {
 
 .search_icon {
     width: 5vh;
-<<<<<<< HEAD
     height: 5vh;
-=======
-    height: 5vh
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 footer {
@@ -122,10 +105,6 @@ section {
 
 .logo {
     height: 100px;
-<<<<<<< HEAD
-=======
-
->>>>>>> cf66b5729dcc00fd2ee2e300327fa22b2a835412
 }
 
 .nextButton {
