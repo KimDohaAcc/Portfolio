@@ -98,8 +98,8 @@ addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "c
 // 
 
 const bookSearch = new Project(
-    "/booksearch",
-    "https://em-content.zobj.net/thumbs/240/facebook/65/left-pointing-magnifying-glass_1f50d.png",
+    "/book",
+    "/resources/image/search_icon.png",
     "Book Search",
     "Book Search and Inquiry Service",
     ['VanilaJS', 'jQeury', 'Kakao Search API'],
@@ -110,7 +110,7 @@ addProject(bookSearch, "frontend", "contain", "center");
 
 const atm = new Project(
     "https://github.com/dohakim0205/ATM.git",
-    "/resources/images/atm.png",
+    "/resources/image/atm.png",
     "DOHA BANK",
     "Console ATM (Java mini profect)",
     ['JAVA'], 
