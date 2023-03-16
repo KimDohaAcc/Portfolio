@@ -83,17 +83,19 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
 }
 
 // Projects 
-/*
-const sample = new Project(
-    "about:blank",
-    "/resources/images/yao.gif",
-    "sample",
-    "sample sample",
-    ['ReactJS','Typescript'],
-    ['2023.03.09', "2023.04.30"]
+/* Ex)
+const atm = new Project(
+    "about:blank", atm 리포지토리 주소
+    "/resources/images/yao.gif", 머신 일러스트 이미지 주소
+    "sample", JinKyeong BANK
+    "sample sample", Console ATM (Java mini profect)
+    ['ReactJS','Typescript'], JAVA
+    ['2023.03.09', "2023.04.30"] 2023.03.13
 );
-addProject(sample, "frontend", "cover", "center");
+
+addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "center"
 */
+// 
 
 const bookSearch = new Project(
     "/booksearch",
@@ -105,3 +107,14 @@ const bookSearch = new Project(
 );
 
 addProject(bookSearch, "frontend", "contain", "center");
+
+const atm = new Project(
+    "https://github.com/dohakim0205/ATM.git",
+    "/resources/images/atm.png",
+    "DOHA BANK",
+    "Console ATM (Java mini profect)",
+    ['JAVA'], 
+    ["2023.03.13"] 
+);
+
+addProject(atm, "backend", "contain", "center");

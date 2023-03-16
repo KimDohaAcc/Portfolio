@@ -4,6 +4,8 @@
 // -> jQuery.ajax() 메소드를 활용
 
 let pageNum = 1;
+let loadNum = 1;
+let response = {};
 
 const query = document.querySelector(".query");
 const container = document.querySelector(".container");
@@ -16,6 +18,7 @@ searchBox.addEventListener("submit", e => {
   e.preventDefault(); // submit의 기본 동작 무시
   container.innerHTML = "";
   pageNum = 1;
+  loadNum = 1;
 
   searchImg.setAttribute("style", "display : none");
 
@@ -26,43 +29,36 @@ searchBox.addEventListener("submit", e => {
     const nextButton = document.createElement("button");
     nextButton.setAttribute("class", "nextButton");
     nextButton.addEventListener("click", e => {
-      page.innerText = `${++pageNum}`;
-      searchRequest(`${query.value}`);
-    });
+      if (pageNum < 5) {
+        page.innerText = `${++pageNum}/5`;
+        searchRequest(`${query.value}`);
+      }
 
+      else {
+        alert("불러올 페이지가 없습니다");
+      }
+    });
+    
     footer.append(nextButton);
     footer.append(page);
+    firstCheck = false;
   }
-
+  
   const searchText = `${query.value}`;
   if (searchText !== "") {
-    searchRequest(searchText);
+    printPage(searchText);
   }
 });
 
-function searchRequest(searchText) {
-  $.ajax({
-    "url": `https://dapi.kakao.com/v3/search/book?query=${searchText}&page=${pageNum}&size=25&target=title`,
-    "method": "GET",
-    "timeout": 0,
-    "headers": {
-      "Authorization": "KakaoAK 205762e8ca1e0563194b28ba858ae453"
-    },
-  }).done(function (response) {
-    console.log(response);
-    printPage(response);
-  });
-}
-
-
-function printPage(response) {
-  for (let i = 0; i < response.documents.length; i++) {
-    try {
-      if (`${response.documents[i].thumbnail}` === "") {
-        continue;
-      }
-    } catch (error) {
-      continue;
+function printPage(searchText) {
+  searchRequest(searchText, loadNum);
+  let count = 0;
+  let i = 0;
+  while(count < 25){
+    if(i === 25){
+      loadNum ++;
+      searchRequest(searchText, loadNum);
+      i = 0;
     }
 
     const div = document.createElement("div");
@@ -106,6 +102,8 @@ function printPage(response) {
     div.append(span1);
     div.append(p1);
     container.append(div);
+    i ++;
+    count ++;
   }
   // 페이지 정보 변수로 빼기
   // 가져온 정보들을 엘리먼트 안에 붙이기만 하면 됨
@@ -123,3 +121,16 @@ function printPage(response) {
   // </div>
 }
 
+
+function searchRequest(searchText) {
+  $.ajax({
+    "url": `https://dapi.kakao.com/v3/search/book?query=${searchText}&page=${loadNum}&size=25&target=title`,
+    "method": "GET",
+    "timeout": 0,
+    "headers": {
+      "Authorization": "KakaoAK 205762e8ca1e0563194b28ba858ae453"
+    },
+  }).done(function (temp) {
+    response = temp;
+  });
+}
