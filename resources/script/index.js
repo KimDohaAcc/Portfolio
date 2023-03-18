@@ -53,7 +53,7 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     const description = document.createElement("h6");
     const skills = document.createElement("div");
     const period = document.createElement("span");
-    
+
     article.setAttribute("class", project.title);
     a.setAttribute("href", project.link);
     a.setAttribute("target", "_blank");
@@ -97,9 +97,21 @@ addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "c
 */
 // 
 
+
+const omok = new Project(
+    "/omok",
+    "/resources/images/baduk.jpg",
+    "Omok",
+    "Omok Game",
+    ['VanilaJS'],
+    ['2023.03.12', "2023.03.12"]
+);
+
+addProject(omok, "frontend", "contain", "center");
+
 const bookSearch = new Project(
     "/book",
-    "/resources/images/search_icon.png",
+    "/resources/images/bookSearch.jpg",
     "Book Search",
     "Book Search and Inquiry Service",
     ['VanilaJS', 'jQeury', 'Kakao Search API'],
@@ -110,11 +122,11 @@ addProject(bookSearch, "frontend", "contain", "center");
 
 const atm = new Project(
     "https://github.com/dohakim0205/ATM.git",
-    "/resources/images/atm.png",
-    "DOHA BANK",
+    "/resources/images/ATM.jpg",
+    "ATM",
     "Console ATM (Java mini profect)",
-    ['JAVA'], 
-    ["2023.03.13"] 
+    ['JAVA'],
+    ["2023.03.15"]
 );
 
 addProject(atm, "backend", "contain", "center");
