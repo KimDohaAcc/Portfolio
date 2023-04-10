@@ -1,3 +1,4 @@
+
 const projectsSection = document.querySelector(".projects");
 const interestsSection = document.querySelector(".interests");
 
@@ -53,7 +54,7 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     const description = document.createElement("h6");
     const skills = document.createElement("div");
     const period = document.createElement("span");
-
+    
     article.setAttribute("class", project.title);
     a.setAttribute("href", project.link);
     a.setAttribute("target", "_blank");
@@ -97,6 +98,16 @@ addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "c
 */
 // 
 
+const bookSearch = new Project(
+    "/book",
+    "/resources/images/search_icon.png",
+    "Book Search",
+    "Book Search and Inquiry Service",
+    ['VanilaJS', 'jQeury', 'Kakao Search API'],
+    ['2023.03.13', "2023.03.13"]
+);
+
+addProject(bookSearch, "frontend", "contain", "center");
 
 const omok = new Project(
     "/omok",
@@ -109,24 +120,13 @@ const omok = new Project(
 
 addProject(omok, "frontend", "contain", "center");
 
-const bookSearch = new Project(
-    "/book",
-    "/resources/images/bookSearch.jpg",
-    "Book Search",
-    "Book Search and Inquiry Service",
-    ['VanilaJS', 'jQeury', 'Kakao Search API'],
-    ['2023.03.13', "2023.03.13"]
-);
-
-addProject(bookSearch, "frontend", "contain", "center");
-
 const atm = new Project(
     "https://github.com/dohakim0205/ATM.git",
-    "/resources/images/ATM.jpg",
-    "ATM",
+    "/resources/images/atm.png",
+    "DOHA BANK",
     "Console ATM (Java mini profect)",
-    ['JAVA'],
-    ["2023.03.15"]
+    ['JAVA'], 
+    ["2023.03.13"] 
 );
 
 addProject(atm, "backend", "contain", "center");
