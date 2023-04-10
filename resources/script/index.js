@@ -100,7 +100,7 @@ addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "c
 
 const bookSearch = new Project(
     "/book",
-    "/resources/images/search_icon.png",
+    "/resources/images/bookSearch.jpg",
     "Book Search",
     "Book Search and Inquiry Service",
     ['VanilaJS', 'jQeury', 'Kakao Search API'],
@@ -122,7 +122,7 @@ addProject(omok, "frontend", "contain", "center");
 
 const atm = new Project(
     "https://github.com/dohakim0205/ATM.git",
-    "/resources/images/atm.png",
+    "/resources/images/ATM.jpg",
     "DOHA BANK",
     "Console ATM (Java mini profect)",
     ['JAVA'], 
@@ -134,7 +134,7 @@ addProject(atm, "backend", "contain", "center");
 const RPG = new Project(
     "https://github.com/dohakim0205/RPG-GAME.git",
     "/resources/images/RPG-GAME.png",
-    "ATM",
+    "RPG",
     "Console RPG (Java mini profect)",
     ['JAVA'],
     ["2023.03.23"]
@@ -145,7 +145,7 @@ addProject(RPG, "backend", "contain", "center");
 const Pokemon = new Project(
     "https://github.com/dohakim0205/Pokemon.git",
     "/resources/images/Pokemon.png",
-    "ATM",
+    "Pokemon",
     "Console Pokemon (Java mini profect)",
     ['JAVA'],
     ["2023.03.26"]
@@ -156,8 +156,8 @@ addProject(Pokemon, "backend", "contain", "center");
 const Poly_RPG_Console_Game = new Project(
     "https://github.com/dohakim0205/Poly-RPG-Console-Game.git",
     "/resources/images/Poly_RPG_Console_Game.png",
-    "ATM",
-    "Console Poly_RPG_Console_Game (Java mini profect)",
+    "Poly RPG Console Game",
+    "Poly_RPG_Console_Game (Java mini profect)",
     ['JAVA'],
     ["2023.03.28"]
 );
@@ -167,9 +167,9 @@ addProject(Poly_RPG_Console_Game, "backend", "contain", "center");
 const RentCar = new Project(
     "https://github.com/dohakim0205/Rentcar.git",
     "/resources/images/RentCar.png",
-    "ATM",
+    "RentCar",
     "Console RentCar (Java mini profect)",
-    ['JAVA'],
+    ['JAVA', 'SQL','JSP','JS'],
     ["2023.04.07"]
 );
 
