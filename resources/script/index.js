@@ -155,27 +155,27 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     container.append(articleContainer);
 }
 
-const bookSearch = new Project(
-    "/book",
-    "/resources/images/bookSearch.jpg",
-    "Book Search",
-    "Book Search and Inquiry Service",
-    ['VanilaJS', 'jQeury', 'Kakao Search API'],
-    ['2023.03.13', '2023.03.13']
-);
+// const bookSearch = new Project(
+//     "/book",
+//     "/resources/images/bookSearch.jpg",
+//     "Book Search",
+//     "Book Search and Inquiry Service",
+//     ['VanilaJS', 'jQeury', 'Kakao Search API'],
+//     ['2023.03.13', '2023.03.13']
+// );
 
-addProject(bookSearch, "frontend", "contain", "center");
+// addProject(bookSearch, "frontend", "contain", "center");
 
-const omok = new Project(
-    "/omok",
-    "/resources/images/baduk.jpg",
-    "Omok",
-    "Omok Game",
-    ['VanilaJS'],
-    ['2023.03.12', '2023.03.12']
-);
+// const omok = new Project(
+//     "/omok",
+//     "/resources/images/baduk.jpg",
+//     "Omok",
+//     "Omok Game",
+//     ['VanilaJS'],
+//     ['2023.03.12', '2023.03.12']
+// );
 
-addProject(omok, "frontend", "contain", "center");
+// addProject(omok, "frontend", "contain", "center");
 
 
 const HealthPanda = new Project(
@@ -232,58 +232,58 @@ const GamjaMarket = new Project(
 
 addProject(GamjaMarket, "backend", "contain", "center");
 
-const RentCar = new Project(
-    "https://github.com/KimDohaAcc/Rentcar.git",
-    "/resources/images/RentCar.png",
-    "RentCar",
-    "Console RentCar (Java mini project)",
-    ['JAVA', 'SQL','JSP','JS'],
-    ["2023.04.07", "2023.04.07"]
-);
+// const RentCar = new Project(
+//     "https://github.com/KimDohaAcc/Rentcar.git",
+//     "/resources/images/RentCar.png",
+//     "RentCar",
+//     "Console RentCar (Java mini project)",
+//     ['JAVA', 'SQL','JSP','JS'],
+//     ["2023.04.07", "2023.04.07"]
+// );
 
-addProject(RentCar, "backend-mini", "contain", "center");
+// addProject(RentCar, "backend-mini", "contain", "center");
 
-const Poly_RPG_Console_Game = new Project(
-    "https://github.com/KimDohaAcc/Poly-RPG-Console-Game.git",
-    "/resources/images/Poly_RPG_Console_Game.png",
-    "Poly RPG Console Game",
-    "Poly_RPG_Console_Game (Java mini project)",
-    ['JAVA'],
-    ["2023.03.28", "2023.03.28"]
-);
+// const Poly_RPG_Console_Game = new Project(
+//     "https://github.com/KimDohaAcc/Poly-RPG-Console-Game.git",
+//     "/resources/images/Poly_RPG_Console_Game.png",
+//     "Poly RPG Console Game",
+//     "Poly_RPG_Console_Game (Java mini project)",
+//     ['JAVA'],
+//     ["2023.03.28", "2023.03.28"]
+// );
 
-addProject(Poly_RPG_Console_Game, "backend-mini", "contain", "center");
+// addProject(Poly_RPG_Console_Game, "backend-mini", "contain", "center");
 
-const Pokemon = new Project(
-    "https://github.com/KimDohaAcc/Pokemon.git",
-    "/resources/images/Pokemon.png",
-    "Pokemon",
-    "Console Pokemon (Java mini project)",
-    ['JAVA'],
-    ["2023.03.26", "2023.03.26"]
-);
+// const Pokemon = new Project(
+//     "https://github.com/KimDohaAcc/Pokemon.git",
+//     "/resources/images/Pokemon.png",
+//     "Pokemon",
+//     "Console Pokemon (Java mini project)",
+//     ['JAVA'],
+//     ["2023.03.26", "2023.03.26"]
+// );
 
-addProject(Pokemon, "backend-mini", "contain", "center");
+// addProject(Pokemon, "backend-mini", "contain", "center");
 
-const RPG = new Project(
-    "https://github.com/KimDohaAcc/RPG-GAME.git",
-    "/resources/images/RPG-GAME.png",
-    "RPG",
-    "Console RPG (Java mini project)",
-    ['JAVA'],
-    ["2023.03.23", "2023.03.23"]
-);
+// const RPG = new Project(
+//     "https://github.com/KimDohaAcc/RPG-GAME.git",
+//     "/resources/images/RPG-GAME.png",
+//     "RPG",
+//     "Console RPG (Java mini project)",
+//     ['JAVA'],
+//     ["2023.03.23", "2023.03.23"]
+// );
 
-addProject(RPG, "backend-mini", "contain", "center");
+// addProject(RPG, "backend-mini", "contain", "center");
 
-const atm = new Project(
-    "https://github.com/KimDohaAcc/ATM.git",
-    "/resources/images/ATM.jpg",
-    "DOHA BANK",
-    "Console ATM (Java mini project)",
-    ['JAVA'], 
-    ["2023.03.13", "2023.03.13"] 
-);
+// const atm = new Project(
+//     "https://github.com/KimDohaAcc/ATM.git",
+//     "/resources/images/ATM.jpg",
+//     "DOHA BANK",
+//     "Console ATM (Java mini project)",
+//     ['JAVA'], 
+//     ["2023.03.13", "2023.03.13"] 
+// );
 
-addProject(atm, "backend-mini", "contain", "center");
+// addProject(atm, "backend-mini", "contain", "center");
 
