@@ -177,6 +177,22 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
 
 // addProject(omok, "frontend", "contain", "center");
 
+const MommyLetter = new Project(
+    "https://github.com/KimDohaAcc/MommyLetter.git",
+    "/resources/images/mommyletter.png",
+    "MommyLetter",
+    "임산부를 위한 SNS 모바일 웹(Web Project)",
+    ['JAVA','SpringBoot','React typescript','MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'JPA', 'Docker', 'Express.js', 'JS'],
+    ["2023.01.03", "2023.02.16"],
+    "https://github.com/KimDohaAcc/MommyLetter.git",
+    "👤👤👤👤👤👤",
+    "DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그",
+    "[Kafka 및 MongoDB를 활용한 실시간 DirectMessage 구현]\n\n"
+    +"Kafka를 사용하여 메시지 큐 및 이벤트 스트리밍을 구현하고, MongoDB를 데이터 저장 및 관리에 활용하여 안정적이고 확장 가능한 채팅 애플리케이션을 개발했습니다. 또한 STOMP를 사용하여 WebSocket을 통해 실시간 통신을 구현하여 사용자 간의 채팅을 가능하게 했습니다.\n\n"
+
+);
+
+addProject(MommyLetter, "backend", "contain", "center");
 
 const HealthPanda = new Project(
     "https://github.com/KimDohaAcc/HealthPanda.git",
@@ -208,8 +224,8 @@ const butok = new Project(
     "[Spring security 적용]\n\n"
     + "Spring security 2.7 버전을 사용하여 비밀번호를 암호화 하였으며, 회원과 관리자의 역할을 나눠 관리자 페이지의 접근을 막았습니다. "
     + "그 과정에서 필요한 config 파일 작성 방법과 userDetail 상속 등을 익힐 수 있었으며, jsp에서 spring security tag library를 활용하여 간편하게 권한 확인을 할 수 있었습니다."
-    + "\n\n[pageable을 활용한 pagination 처리]\n\nPageable을 이용하여 페이지네이션 처리를 구현하였습니다. 전월세 데이터가 많이 존재하는 경우 데이터를 효율적으로 관리하고 사용자에게 더 나은 경험을 제공할 수 있었습니다. 이를 통해 데이터 관리와 성능 최적화에 대한 이해를 높였습니다."
-    + "..."
+    + "\n\n[pageable을 활용한 pagination 처리]\n\n"
+    +"Pageable을 이용하여 페이지네이션 처리를 구현하였습니다. 전월세 데이터가 많이 존재하는 경우 페이지네이션으로 데이터를 효율적으로 관리하고 사용자에게 보다 편리한 서비스를 제공할 수 있었습니다."
 );
 
 addProject(butok, "backend", "contain", "center");
