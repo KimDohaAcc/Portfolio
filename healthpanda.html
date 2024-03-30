@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/images/healthPanda.png">
+    <link rel="stylesheet" href="resources/style/project.css">
+    <title>헬스 판다</title>
+    <style>
+        .logo-container img {
+            width: 150px;
+        }
+    
+        .project-introduce th {
+            background-color: #090276;
+            /* Header background color */
+            color: #ffffff;
+            /* Header text color */
+            font-weight: bold;
+            /* Bold header text */
+        }
+    
+        /* Alternating row background color */
+        .project-introduce tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Even row background color */
+        }
+    
+        /* Highlighted row background color */
+        .project-introduce tr.highlight {
+            background-color: #ffc107;
+            /* Highlighted row background color */
+        }
+    
+        /* Apply different style to the first column */
+        .project-introduce tr td:first-child {
+            font-weight: bold;
+            /* Bold text for the first column */
+            background-color: #b1c7ff;
+            /* Text color for the first column */
+        }
+    
+        /* Apply different style to the second column */
+        .project-introduce tr td:last-child {
+            color: #666;
+            /* Text color for the second column */
+        }
+    </style>
+</head>
+<body>
+    <div class="project-container">
+        <div class="logo-container">
+            <img src="resources/images/healthPanda.png" alt="헬스 판다 로고">
+            <h1>헬스 판다</h1>
+        </div>
+        <section class="project-introduce">
+            <table>
+                <tr>
+                    <th style="text-align: center;"><strong>항목</strong></th>
+                    <th style="text-align: center;"><strong>내용</strong></th>
+                </tr>
+                <tr>
+                    <td><strong>기간</strong></td>
+                    <td>2023년 10월 17일 → 2023년 11월 23일</td>
+                </tr>
+                <tr>
+                    <td><strong>사용 기술</strong></td>
+                    <td>AWS, GitLab, JPA, Java, JavaScript, Kakao-openbuilder, MySQL, SpringBoot, Vue, node.js</td>
+                </tr>
+                <tr>
+                    <td><strong>한 줄 설명</strong></td>
+                    <td>카카오 챗봇을 활용한 헬스장 서비스</td>
+                </tr>
+                <tr>
+                    <td><strong>개발 인원<br>(역할)</strong></td>
+                    <td>2명 (팀원)</td>
+                </tr>
+                <tr>
+                    <td><strong>Github</strong></td>
+                    <td><a
+                            href="https://github.com/KimDohaAcc/HealthPanda">https://github.com/KimDohaAcc/HealthPanda</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="project-description">
+            <h2>📖 프로젝트 소개</h2>
+            <p>헬스장 이용자들에게 편의를 제공하는 웹/챗봇 서비스로 마치 헬스 트레이너처럼 헬스 판다 챗봇이 사용자의 운동 출석 및 식단 관리를 해줍니다. 웹에서는 지점 안내, 상담 예약 등 헬스장
+                이용과 관련한 서비스를 제공하고 있습니다.</p>
+            <br>
+            <p><strong>주요 기능</strong></p>
+            <ul>
+                <li>챗봇 : 다이어트 및 운동 식단 추천, 운동 출석 관리, 식단 조회 및 기록</li>
+                <li>웹 : 운동 추천 영상, 지점별 상담 예약, 이용 후기, 좋아요 및 팔로우</li>
+            </ul>
+            <br>
+            <img class="ui" src="resources/images/healthPanda.png" alt="프로젝트 이미지">
+            <br>
+            <h2>🙋‍♂️ 역할</h2>
+            <p>챗봇 - 챗봇 개발 환경 구축, 식단 조회 및 기록, 식단 추천</p>
+            <br>
+            <p>웹 - HTTPS 배포, RDS 구축, JWT 토큰 적용, 운동 영상 추천, 좋아요 및 팔로우</p>
+            <br>
+            <h2>🎯 기술 리뷰</h2>
+            <p>[Kakao-openbuilder 스킬 환경 구축]</p>
+            <p>서버 환경을 결정할 때는 비용과 효율을 고려해야 했습니다. 초기에는 Lambda를 선택하여 서버리스 컴퓨팅을 시도했지만, Lambda는 Spring Boot 및 데이터베이스와 같은 추가적인
+                설정이 필요했습니다. 또한, Lambda의 cold start 문제와 함수 크기 제한으로 인해 Spring Boot를 사용할 때는 많은 최적화가 필요했습니다. 이에 따라 짧은 프로젝트
+                기간과 Spring Boot 환경을 고려하여 EC2를 선택했습니다.</p>
+            <br>
+            <p>[AWS를 활용한 HTTPS 설정]</p>
+            <p>HTTPS 보안 서버를 구축하기 위해 도메인 발급과 AWS의 Route53을 사용하여 도메인 소유를 인증하고, ACM으로 SSL 인증서를 발급 받았습니다. 또한, 모든 요청을 HTTPS로
+                리다이렉션하기 위해 Load Balancer에 규칙을 추가했습니다.</p>
+        </section>
+    </div>
+</body>
+</html>

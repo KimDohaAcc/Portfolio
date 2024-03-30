@@ -19,7 +19,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 75vh;
+    grid-template-rows: 150px 75vh;
 
     width: 90%;
     height: 90vh;
@@ -28,7 +28,7 @@ a {
 
 .contents {
     display: grid;
-    grid-template-columns: 200px 3fr 1fr;
+    grid-template-columns: 270px 3fr 1fr;
     gap: 10px;
 }
 
@@ -40,8 +40,9 @@ section::-webkit-scrollbar {
     display: none;
 }
 
+
 .profile>img {
-    width: 90%;
+    width: 70%;
     padding: 10px;
     background-color: whitesmoke;
 }
@@ -76,7 +77,7 @@ hr {
     width: 250px;
     height: 250px;
     padding: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     background-color: whitesmoke;
 }
 
@@ -85,7 +86,7 @@ hr {
 .article>div,
 .article>span {
     width: 100%;
-    height: 25px;
+    height: 30px;
     overflow-x: scroll;
     overflow-y: hidden;
 }
@@ -117,6 +118,7 @@ hr {
     background-color: rgb(252, 252, 252);
     margin: 0 20px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .detail-article p {
@@ -133,18 +135,13 @@ hr {
 }
 
 .skills>span {
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     font-size: 0.8em;
     border: none;
     border-radius: 3px;
     padding: 0 5px;
     margin-right: 3px;
-    background-color: lightgrey;
     white-space: nowrap;
-}
-
-.skills>span:hover {
-    background-color: #f797c7;
 }
 
 .description {
@@ -193,6 +190,7 @@ header {
     align-items: end;
     border-bottom: solid 3px whitesmoke;
     padding: 10px 0;
+    padding-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -242,6 +240,7 @@ address {
     text-align: center;
 }
 
+
 @media screen and (max-width : 760px) {
 
     hr {
@@ -288,5 +287,10 @@ address {
     .interests>article {
         width: 85vw;
         height: 70vw;
+    }
+
+    .detail-article {
+        margin: 20px 0;
+        width: 85vw;
     }
 }
