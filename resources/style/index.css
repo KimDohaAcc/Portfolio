@@ -19,8 +19,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 150px 75vh;
-
+    grid-template-rows: 150px 70vh;
     width: 90%;
     height: 90vh;
     margin: auto;
@@ -74,10 +73,10 @@ hr {
 }
 
 .article {
-    width: 250px;
+    width: 200px;
     height: 250px;
     padding: 10px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     background-color: whitesmoke;
 }
 
@@ -114,7 +113,7 @@ hr {
 }
 
 .detail-article {
-    width: 500px;
+    width: 450px;
     background-color: rgb(252, 252, 252);
     margin: 0 20px;
     padding: 20px;
@@ -162,14 +161,9 @@ hr {
 
 .likes-img {
     height: 96%;
-    /* filter: grayscale(1); */
     background-size: cover;
     background-color: lightgrey;
 }
-
-/* .interests>article:hover .likes-img {
-    filter: grayscale(0);
-} */
 
 .interests>article>h6 {
     color: grey;
@@ -222,7 +216,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
     width: 100vw;
     height: 150px;
     background-color: whitesmoke;

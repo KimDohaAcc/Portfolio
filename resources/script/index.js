@@ -149,43 +149,50 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     articleContainer.append(article);
 
     const detailArticle = document.createElement("div");
+    const detailSiteLinkArticle = document.createElement("p");
     const siteLinkTitle = document.createElement("strong");
     const siteLink = document.createElement("a");
+    const detailPersonArticle = document.createElement("span");
     const detailPersonTitle = document.createElement("strong");
     const detailPerson = document.createElement("span");
+    const detailRoleArticle = document.createElement("p");
     const detailRoleTitle = document.createElement("strong");
     const detailRole = document.createElement("p");
+    const detailReviewArticle = document.createElement("p");
     const detailReviewTitle = document.createElement("strong");
     const detailReview = document.createElement("p");
 
+    detailArticle.className = "detail-article";
     siteLinkTitle.setAttribute("class", "detail-title");
     siteLinkTitle.innerText = "Github\t\t";
     siteLink.setAttribute("class", "detail-content");
     siteLink.href = project.site;
     siteLink.innerText = project.site;
-    detailArticle.className = "detail-article";
     detailPersonTitle.setAttribute("class", "detail-title");
-    detailPersonTitle.innerText = "\n\n개발 인원";
+    detailPersonTitle.innerText = "\n개발 인원\t";
     detailPerson.setAttribute("class", "detail-content");
     detailPerson.innerText = project.person;
     detailRoleTitle.setAttribute("class", "detail-title");
-    detailRoleTitle.innerText = "\n\n담당 역할";
+    detailRoleTitle.innerText = "\n담당 역할";
     detailRole.setAttribute("class", "detail-content");
     detailRole.innerText = project.role;
     detailReviewTitle.setAttribute("class", "detail-title");
-    detailReviewTitle.innerText = "기술 리뷰";
+    detailReviewTitle.innerText = "\n기술 리뷰";
     detailReview.setAttribute("class", "detail-content");
     detailReview.innerText = project.review;
 
-    detailArticle.append(siteLinkTitle);
-    detailArticle.append(siteLink);
-    detailArticle.append(detailPersonTitle);
-    detailArticle.append(detailPerson);
-    detailArticle.append(detailRoleTitle);
-    detailArticle.append(detailRole);
-    detailArticle.append(detailReviewTitle);
-    detailArticle.append(detailReview);
-
+    detailArticle.append(detailSiteLinkArticle);
+    detailSiteLinkArticle.append(siteLinkTitle);
+    detailSiteLinkArticle.append(siteLink);
+    detailArticle.append(detailPersonArticle);
+    detailPersonArticle.append(detailPersonTitle);
+    detailPersonArticle.append(detailPerson);
+    detailArticle.append(detailRoleArticle);
+    detailRoleArticle.append(detailRoleTitle);
+    detailRoleArticle.append(detailRole);
+    detailArticle.append(detailReviewArticle);
+    detailReviewArticle.append(detailReviewTitle);
+    detailReviewArticle.append(detailReview);
     articleContainer.append(detailArticle);
     container.append(articleContainer);
 }
@@ -196,7 +203,7 @@ const MommyLetter = new Project(
     "/resources/images/mommyletter.png",
     "MommyLetter",
     "임산부를 위한 SNS 모바일 웹",
-    ['JAVA', 'SpringBoot', 'React typescript', 'MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'JPA', 'Docker', 'Express.js', 'JS'],
+    ['JAVA', 'SpringBoot', 'JPA', 'React typescript', 'MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'Docker', 'Express.js', 'JS'],
     ["2023.01.03", "2023.02.16"],
     "https://github.com/KimDohaAcc/MommyLetter.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
