@@ -177,7 +177,7 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     detailRole.setAttribute("class", "detail-content");
     detailRole.innerText = project.role;
     detailReviewTitle.setAttribute("class", "detail-title");
-    detailReviewTitle.innerText = "\n기술 리뷰";
+    detailReviewTitle.innerText = "\n기술 프리뷰";
     detailReview.setAttribute("class", "detail-content");
     detailReview.innerText = project.review;
 
@@ -197,17 +197,39 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     container.append(articleContainer);
 }
 
+const TobysCarrotFarm = new Project(
+    "./toby.html",
+    "/resources/images/toby.png",
+    "Toby's Carrot Farm",
+    "AI 퀴즈를 기반으로 한 미취학 아동 교육 서비스",
+    ['JAVA', 'SpringBoot', 'SpringSecurity', 'JPA', 'React', 'MySQL', 'Redis', 'Apache Kafka', 'NginX', 'Docker', 'Jenkins', 'Jira', 'Gitlab'],
+    ["2024.02.19", "2024.04.08"],
+    "https://github.com/KimDohaAcc/Toby-carrot-garden.git",
+    "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
+    "인프라, Story API 구현, AI 모델 성능 검증",
+    "\n[Docker 컨테이너와 Nginx의 활용]"
+    
+    + "\n\nReact, Spring Boot, Python, Kafka, Redis, MySQL을 각각 Docker 컨테이너에 담아 Docker 네트워크로 연결하여 서버를 구축했습니다. "
+    + "Python AI 서버는 AI 모델 구동을 위한 라이브러리 때문에 상당히 무거웠습니다. "
+    + "\n\n그래서 구동 효율성을 높이기 위해 라이브러리, 모델 등 환경 설정 Docker 이미지와 코드가 담기는 이미지를 분리하고 "
+    + "Python 이미지를 만드는 Dockerfile에 환경 설정 이미지를 포함하여 구동 시간을 줄일 수 있었습니다. "
+    + "\n\n또한, Nginx 리버스 프록시를 적용하여 프론트엔드와 백엔드 요청을 분리해서 처리하였으며, "
+    + "SSL 인증서를 발급하여 HTTPS를 적용했습니다. 이를 통해 인프라 구축에 대한 실전 경험을 쌓을 수 있었습니다."
+);
+
+addProject(TobysCarrotFarm, "backend", "contain", "center");
+
 
 const MommyLetter = new Project(
     "./mommyletter.html",
     "/resources/images/mommyletter.png",
     "MommyLetter",
     "임산부를 위한 SNS 모바일 웹",
-    ['JAVA', 'SpringBoot', 'JPA', 'React typescript', 'MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'Docker', 'Express.js', 'JS'],
+    ['JAVA', 'SpringBoot', 'JPA', 'React typescript', 'MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'Docker', 'Express.js', 'JS', 'Jira', 'Gitlab'],
     ["2023.01.03", "2023.02.16"],
     "https://github.com/KimDohaAcc/MommyLetter.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
-    "DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그",
+    "DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그 기능 구현",
     "[Kafka 및 MongoDB를 활용한 실시간 DirectMessage 구현]\n\n"
     + "Kafka를 사용하여 메시지 큐 및 이벤트 스트리밍을 구현하고, MongoDB를 데이터 저장 및 관리에 활용하여 안정적이고 확장 가능한 채팅 애플리케이션을 개발했습니다. 또한 STOMP를 사용하여 WebSocket을 통해 실시간 통신을 구현하여 사용자 간의 채팅을 가능하게 했습니다.\n\n"
     + "프로젝트 중반에 그룹 채팅 기능을 만들게 되었습니다. 이미 Kafka 설정을 DM에 맞게 해둔 터라 설정 및 리스너를 변경해야 했습니다. 팀원들과 상의하여 DM과 그룹 채팅의 컨슈머를 분리하고 토픽을 새로 구성하여 성공적으로 그룹 채팅 기능까지 구현할 수 있었습니다."
@@ -238,7 +260,7 @@ const butok = new Project(
     "/resources/images/toktok.png",
     "Butok",
     "부동산 전월세 실거래가 조회 사이트",
-    ['JAVA', 'Spring', 'mySQL', 'JSP', 'JS', 'AWS'],
+    ['JAVA', 'SpringBoot', 'SpringSecurity', 'mySQL', 'JSP', 'JS', 'AWS'],
     ["2023.04.27", "2023.05.15"],
     "https://github.com/KimDohaAcc/Butok.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
@@ -260,7 +282,7 @@ const GamjaMarket = new Project(
     ["2023.04.11", "2023.04.24"],
     "https://github.com/KimDohaAcc/GamjaMarket.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
-    "판매자와 구매자 1:1 채팅, 자유게시판",
+    "판매자와 구매자 1:1 채팅, 자유게시판 기능 구현",
     "[firebase의 realtime-database를 활용한 채팅 구현]\n\n"
     + "Firebase의 Realtime Database를 활용하여 실시간 채팅 및 채팅 알람 기능을 구현했습니다. 이를 통해 사용자들이 실시간으로 채팅할 수 있으며, 새로운 메시지가 도착하면 메인 화면에 알림을 표시했습니다. 이를 통해 실시간 데이터 처리 및 알림 시스템을 구축하면서 Message Listener에 대한 개념을 익혔습니다."
 );
