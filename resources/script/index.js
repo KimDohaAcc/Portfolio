@@ -9,7 +9,7 @@ window.onload = function () {
         "rgba(226, 187, 216, 0.7)"  // #E2BBD8
     ];
 
-    var spans = document.querySelectorAll('.skills>span');
+    var spans = document.querySelectorAll('.skillSpan');
     spans.forEach(function (span) {
         var randomIndex = Math.floor(Math.random() * pastelColors.length);
         span.style.backgroundColor = pastelColors[randomIndex];
@@ -65,12 +65,16 @@ for (let i = 0; i < headers.length; i++) {
     });
 }
 
-function Project(link, imageUrl, title, description, skills, period, site, person, role, review) {
+function Project(link, imageUrl, title, description, detailPeriod, skillLang, skillFrame, skillDatabase, skillOther, period, site, person, role, review) {
     this.link = link;
     this.imageUrl = imageUrl;
     this.title = title;
     this.description = description;
-    this.skills = skills;
+    this.detailPeriod = detailPeriod;
+    this.skillLang = skillLang;
+    this.skillFrame = skillFrame;
+    this.skillDatabase = skillDatabase;
+    this.skillOther = skillOther;
     this.period = period;
     this.person = person;
     this.site = site;
@@ -96,9 +100,10 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
 
     articleContainer.style.display = "flex";
     articleContainer.style.flexFlow = "wrap row";
+    articleContainer.style.alignItems = "space-around";
 
     const article = document.createElement("div");
-    const info = document.createElement("p");
+    const info = document.createElement("h6");
     const a = document.createElement("a");
     const projectImg = document.createElement("div");
     const title = document.createElement("h3");
@@ -106,10 +111,9 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     const skills = document.createElement("div");
     const period = document.createElement("span");
 
-    info.innerText = "Click for more detail✨";
-    info.style.fontWeight = 500;
-    info.style.fontSize = "10pt";
+    info.innerText = "Click해서 상세 내용 보기✨";
     info.style.textAlign = "right";
+    info.style.fontSize = "13px";
     info.style.paddingBottom = "10px";
     article.setAttribute("class", `article ${project.title}`);
     article.style.height = "40vh";
@@ -124,7 +128,7 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     description.innerText = project.description;
     skills.setAttribute("class", "skills");
     skills.style.display = "flex";
-    skills.style.flexFlow = "wrap row";
+    skills.style.flexFlow = "wrap column";
     skills.style.height = "fit-content";
     period.className = "period";
     period.innerText = `${project.period[0]} ~ ${project.period[1]}`;
@@ -137,12 +141,71 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     article.append(a);
     article.append(title);
     article.append(description);
-    project.skills.forEach(str => {
+
+    let skillTitle = document.createElement("h6");
+    skills.append(skillTitle);
+    let skillDiv = document.createElement("div");
+    skillDiv.style.display = "flex";
+    skillDiv.style.flexFlow = "wrap row";
+    skillDiv.style.height = "fit-content";
+    skillTitle.innerText = "Languages";
+    project.skillLang.forEach(str => {
         const skill = document.createElement("span");
+        skill.setAttribute("class", "skillSpan");
         skill.innerText = str;
         skill.style.marginBottom = "2%";
-        skills.append(skill);
+        skillDiv.append(skill);
     });
+    skills.append(skillDiv);
+
+    skillTitle = document.createElement("h6");
+    skills.append(skillTitle);
+    skillDiv = document.createElement("div");
+    skillDiv.style.display = "flex";
+    skillDiv.style.flexFlow = "wrap row";
+    skillDiv.style.height = "fit-content";
+    skillTitle.innerText = "Frameworks & Libraries";
+    project.skillFrame.forEach(str => {
+        const skill = document.createElement("span");
+        skill.setAttribute("class", "skillSpan");
+        skill.innerText = str;
+        skill.style.marginBottom = "2%";
+        skillDiv.append(skill);
+    });
+    skills.append(skillDiv);
+
+    skillTitle = document.createElement("h6");
+    skills.append(skillTitle);
+    skillDiv = document.createElement("div");
+    skillDiv.style.display = "flex";
+    skillDiv.style.flexFlow = "wrap row";
+    skillDiv.style.height = "fit-content";
+    skillTitle.innerText = "Databases";
+    project.skillDatabase.forEach(str => {
+        const skill = document.createElement("span");
+        skill.setAttribute("class", "skillSpan");
+        skill.innerText = str;
+        skill.style.marginBottom = "2%";
+        skillDiv.append(skill);
+    });
+    skills.append(skillDiv);
+
+    skillTitle = document.createElement("h6");
+    skills.append(skillTitle);
+    skillDiv = document.createElement("div");
+    skillDiv.style.display = "flex";
+    skillDiv.style.flexFlow = "wrap row";
+    skillDiv.style.height = "fit-content";
+    skillTitle.innerText = "Other Technologies";
+    project.skillOther.forEach(str => {
+        const skill = document.createElement("span");
+        skill.setAttribute("class", "skillSpan");
+        skill.innerText = str;
+        skill.style.marginBottom = "2%";
+        skillDiv.append(skill);
+    });
+    skills.append(skillDiv);
+
     article.append(skills);
     article.append(period);
 
@@ -155,6 +218,8 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     const detailPersonArticle = document.createElement("span");
     const detailPersonTitle = document.createElement("strong");
     const detailPerson = document.createElement("span");
+    const detailPeriodTitle = document.createElement("strong");
+    const detailPeriod = document.createElement("p");
     const detailRoleArticle = document.createElement("p");
     const detailRoleTitle = document.createElement("strong");
     const detailRole = document.createElement("p");
@@ -172,6 +237,10 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     detailPersonTitle.innerText = "\n개발 인원\t";
     detailPerson.setAttribute("class", "detail-content");
     detailPerson.innerText = project.person;
+    detailPeriodTitle.setAttribute("class", "detail-title");
+    detailPeriodTitle.innerText = "\n\n개발 기간";
+    detailPeriod.setAttribute("class", "detail-content");
+    detailPeriod.innerText = project.detailPeriod;
     detailRoleTitle.setAttribute("class", "detail-title");
     detailRoleTitle.innerText = "\n담당 역할";
     detailRole.setAttribute("class", "detail-content");
@@ -187,6 +256,8 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     detailArticle.append(detailPersonArticle);
     detailPersonArticle.append(detailPersonTitle);
     detailPersonArticle.append(detailPerson);
+    detailArticle.append(detailPeriodTitle);
+    detailArticle.append(detailPeriod);
     detailArticle.append(detailRoleArticle);
     detailRoleArticle.append(detailRoleTitle);
     detailRoleArticle.append(detailRole);
@@ -194,19 +265,52 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     detailReviewArticle.append(detailReviewTitle);
     detailReviewArticle.append(detailReview);
     articleContainer.append(detailArticle);
+
     container.append(articleContainer);
 }
 
+// 언어, 프레임워크, db, other
+const Omegi = new Project(
+    "./omegi.html",
+    "/resources/images/omegi-logo.PNG",
+    "_Omegi_",
+    "오류를 자동으로 추적 및 분석하며, 해결 과정을 노트로 남길 수 있는 서비스",
+    "기획 : 2024.02.19 - 2024.02.28\n"
+    + "설계 : 2024.02.28 - 2024.03.08\n"
+    + "프로젝트 개발 : 2024.03.08 - 2024.03.29\n"
+    + "테스트 : 2024.03.29 - 2024.04.08\n",
+    ['Java', 'Python', 'Typescript'],
+    ['SpringBoot', 'SpringSecurity','JPA', 'React'],
+    ['MySQL', 'MongoDB', 'Redis', 'Elasticsearch'],
+    ['Apache Kafka', 'RabbitMQ', 'Nginx', 'Docker', 'Jenkins', 'Jira', 'Gitlab'],
+    ["2024.02.19", "2024.04.08"],
+    "https://github.com/TeamOmegi",
+    "🙋‍♀️🧞‍♀️🙋🧟‍♀️🙋‍♂️🙋",
+    "Java Instrumentation 제작\n정상 요청 가공 및 전송 로직 구현",
+    "\n[어쩌구 저쩌구]"
+    + "\n[어쩌구 저쩌구]"
+);
+addProject(Omegi, "backend", "contain", "center");
+
+
+// 언어, 프레임워크, db, other
 const TobysCarrotFarm = new Project(
     "./toby.html",
     "/resources/images/toby.png",
     "Toby's Carrot Farm",
     "AI 퀴즈를 기반으로 한 미취학 아동 교육 서비스",
-    ['JAVA', 'SpringBoot', 'SpringSecurity', 'JPA', 'React', 'MySQL', 'Redis', 'Apache Kafka', 'NginX', 'Docker', 'Jenkins', 'Jira', 'Gitlab'],
+    "기획 : 2024.02.19 - 2024.02.28\n"
+    + "설계 : 2024.02.28 - 2024.03.08\n"
+    + "프로젝트 개발 : 2024.03.08 - 2024.03.29\n"
+    + "테스트 : 2024.03.29 - 2024.04.08\n",
+    ['Java', 'Python', 'Typescript'],
+    ['SpringBoot', 'SpringSecurity','JPA', 'React'],
+    ['MySQL', 'Redis'],
+    ['Apache Kafka', 'Nginx', 'Docker', 'Jenkins', 'Jira', 'Gitlab'],
     ["2024.02.19", "2024.04.08"],
     "https://github.com/KimDohaAcc/Toby-carrot-garden.git",
-    "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
-    "인프라, Story API 구현, AI 모델 성능 검증",
+    "🙋‍♀️🙋‍♂️🙋🧞‍♀️🙋‍♂️🙋",
+    "인프라, Story API 구현, AI 모델 성능 검증",   
     "\n[Docker 컨테이너와 Nginx의 활용]"
     
     + "\n\nReact, Spring Boot, Python, Kafka, Redis, MySQL을 각각 Docker 컨테이너에 담아 Docker 네트워크로 연결하여 서버를 구축했습니다. "
@@ -225,8 +329,15 @@ const MommyLetter = new Project(
     "/resources/images/mommyletter.png",
     "MommyLetter",
     "임산부를 위한 SNS 모바일 웹",
-    ['JAVA', 'SpringBoot', 'JPA', 'React typescript', 'MariaDB', 'MongoDB', 'Apache Kafka', 'STOMP', 'Docker', 'Express.js', 'JS', 'Jira', 'Gitlab'],
-    ["2023.01.03", "2023.02.16"],
+    "기획 : 2024.01.03 - 2024.01.14\n"
+    + "설계 : 2024.01.15 - 2024.01.20\n"
+    + "프로젝트 개발 : 2024.01.21 - 2024.02.12\n"
+    + "테스트 : 2024.02.13 - 2024.02.16\n",
+    ['Java', 'Typescript'],
+    ['SpringBoot', 'SpringSecurity', 'JPA', 'React'],
+    ['MariaDB', 'MongoDB'],
+    ['Apache Kafka', 'STOMP', 'Docker', 'Jira', 'Gitlab'],
+    ["2024.01.03", "2024.02.16"],
     "https://github.com/KimDohaAcc/MommyLetter.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
     "DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그 기능 구현",
@@ -243,7 +354,11 @@ const HealthPanda = new Project(
     "/resources/images/healthPanda.png",
     "Health-Panda",
     "카카오 챗봇을 활용한 헬스장 서비스",
-    ['JAVA', 'Spring', 'Vue', 'mySQL', 'JS', 'node.js', 'AWS', 'kakao-openbuilder'],
+    "2023.10.17 - 2023.11.23\n",
+    ['Java', 'Vanilla JS'],
+    ['SpringBoot', 'Vue.js'],
+    ['MySQL', 'AWS S3', 'AWS RDS'],
+    ['AWS EC2', 'AWS ACM', 'kakao-i-openbuilder'],
     ["2023.10.17", "2023.11.23"],
     "https://github.com/KimDohaAcc/HealthPanda.git",
     "🙋‍♀️🙋‍♂️",
@@ -260,7 +375,11 @@ const butok = new Project(
     "/resources/images/toktok.png",
     "Butok",
     "부동산 전월세 실거래가 조회 사이트",
-    ['JAVA', 'SpringBoot', 'SpringSecurity', 'mySQL', 'JSP', 'JS', 'AWS'],
+    "2023.04.27 - 2023.05.15\n",
+    ['Java', 'Vanilla JS'],
+    ['SpringBoot', 'SpringSecurity', 'JPA'],
+    ['MySQL', 'AWS RDS'],
+    ['JSP', 'AWS EC2', 'AWS S3'],
     ["2023.04.27", "2023.05.15"],
     "https://github.com/KimDohaAcc/Butok.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
@@ -277,8 +396,12 @@ const GamjaMarket = new Project(
     "./gamja-market.html",
     "/resources/images/potato.png",
     "Gamja-Market",
-    "동네 중고 거래 사이트",
-    ['JAVA', 'mySQL', 'JSP', 'JS', 'AWS'],
+    "동네 중고 거래 플랫폼",
+    "2023.04.11 - 2023.04.24\n",
+    ['Java', 'Vanilla JS'],
+    ['SpringBoot'],
+    ['MySQL', 'Firebase', 'AWS RDS'],
+    ['JSP', 'AWS EC2'],
     ["2023.04.11", "2023.04.24"],
     "https://github.com/KimDohaAcc/GamjaMarket.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
