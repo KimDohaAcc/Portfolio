@@ -275,20 +275,21 @@ const Omegi = new Project(
     "/resources/images/omegi-logo.PNG",
     "_Omegi_",
     "오류를 자동으로 추적 및 분석하며, 해결 과정을 노트로 남길 수 있는 서비스",
-    "기획 : 2024.02.19 - 2024.02.28\n"
-    + "설계 : 2024.02.28 - 2024.03.08\n"
-    + "프로젝트 개발 : 2024.03.08 - 2024.03.29\n"
-    + "테스트 : 2024.03.29 - 2024.04.08\n",
+    "기획 : 2024.04.03 - 2024.04.15\n"
+    + "설계 : 2024.04.16 - 2024.04.23\n"
+    + "프로젝트 개발 : 2024.04.24 - 2024.05.12\n"
+    + "테스트 : 2024.05.13 - 2024.05.20\n",
     ['Java', 'Python', 'Typescript'],
     ['SpringBoot', 'SpringSecurity','JPA', 'React'],
     ['MySQL', 'MongoDB', 'Redis', 'Elasticsearch'],
     ['Apache Kafka', 'RabbitMQ', 'Nginx', 'Docker', 'Jenkins', 'Jira', 'Gitlab'],
-    ["2024.02.19", "2024.04.08"],
+    ["2024.04.03", "2024.05.20"],
     "https://github.com/TeamOmegi",
     "🙋‍♀️🧞‍♀️🙋🧟‍♀️🙋‍♂️🙋",
-    "Java Instrumentation 제작\n정상 요청 가공 및 전송 로직 구현",
-    "\n[어쩌구 저쩌구]"
-    + "\n[어쩌구 저쩌구]"
+    "Java Instrumentation 제작\n정상 요청 가공 및 전송 로직 구현\n서버 인프라 구축",
+    "[Custom JavaAgent 제작]"
+    + "\n[Kafka Consumer 확장]"
+    + "\n[배치 및 스케줄러 도입]"
 );
 addProject(Omegi, "backend", "contain", "center");
 
@@ -310,15 +311,12 @@ const TobysCarrotFarm = new Project(
     ["2024.02.19", "2024.04.08"],
     "https://github.com/KimDohaAcc/Toby-carrot-garden.git",
     "🙋‍♀️🙋‍♂️🙋🧞‍♀️🙋‍♂️🙋",
-    "인프라, Story API 구현, AI 모델 성능 검증",   
-    "\n[Docker 컨테이너와 Nginx의 활용]"
-    
-    + "\n\nReact, Spring Boot, Python, Kafka, Redis, MySQL을 각각 Docker 컨테이너에 담아 Docker 네트워크로 연결하여 서버를 구축했습니다. "
-    + "Python AI 서버는 AI 모델 구동을 위한 라이브러리 때문에 상당히 무거웠습니다. "
-    + "\n\n그래서 구동 효율성을 높이기 위해 라이브러리, 모델 등 환경 설정 Docker 이미지와 코드가 담기는 이미지를 분리하고 "
-    + "Python 이미지를 만드는 Dockerfile에 환경 설정 이미지를 포함하여 구동 시간을 줄일 수 있었습니다. "
-    + "\n\n또한, Nginx 리버스 프록시를 적용하여 프론트엔드와 백엔드 요청을 분리해서 처리하였으며, "
-    + "SSL 인증서를 발급하여 HTTPS를 적용했습니다. 이를 통해 인프라 구축에 대한 실전 경험을 쌓을 수 있었습니다."
+    "스토리 관련 API 구현\n서버 인프라 구축\nJenkins 파이프라인 구축\nAI 모델 테스트",   
+    "[Docker 컨테이너와 Nginx의 활용]"
+    + "\n[Jenkins 파이프라인을 이용한 CI/CD 구축]"
+    + "\n[PWA 서비스 워커의 캐시 문제 해결]"
+    + "\n[AI 물체 분석 결과 개선]"
+
 );
 
 addProject(TobysCarrotFarm, "backend", "contain", "center");
@@ -340,10 +338,9 @@ const MommyLetter = new Project(
     ["2024.01.03", "2024.02.16"],
     "https://github.com/KimDohaAcc/MommyLetter.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
-    "DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그 기능 구현",
-    "[Kafka 및 MongoDB를 활용한 실시간 DirectMessage 구현]\n\n"
-    + "Kafka를 사용하여 메시지 큐 및 이벤트 스트리밍을 구현하고, MongoDB를 데이터 저장 및 관리에 활용하여 안정적이고 확장 가능한 채팅 애플리케이션을 개발했습니다. 또한 STOMP를 사용하여 WebSocket을 통해 실시간 통신을 구현하여 사용자 간의 채팅을 가능하게 했습니다.\n\n"
-    + "프로젝트 중반에 그룹 채팅 기능을 만들게 되었습니다. 이미 Kafka 설정을 DM에 맞게 해둔 터라 설정 및 리스너를 변경해야 했습니다. 팀원들과 상의하여 DM과 그룹 채팅의 컨슈머를 분리하고 토픽을 새로 구성하여 성공적으로 그룹 채팅 기능까지 구현할 수 있었습니다."
+    "DirectMessage, GroupChat, 피드, 댓글, 좋아요, 해시태그 API 구현",
+    "[그룹채팅 기능 추가\n]"
+    + "[Gerrit을 활용한 코드 리뷰]"
 
 );
 
@@ -356,16 +353,15 @@ const HealthPanda = new Project(
     "카카오 챗봇을 활용한 헬스장 서비스",
     "2023.10.17 - 2023.11.23\n",
     ['Java', 'Vanilla JS'],
-    ['SpringBoot', 'Vue.js'],
+    ['SpringBoot', 'JPA', 'Vue.js'],
     ['MySQL', 'AWS S3', 'AWS RDS'],
     ['AWS EC2', 'AWS ACM', 'kakao-i-openbuilder'],
     ["2023.10.17", "2023.11.23"],
     "https://github.com/KimDohaAcc/HealthPanda.git",
     "🙋‍♀️🙋‍♂️",
     "챗봇 - 챗봇 개발 환경 구축, 식단 조회 및 기록, 식단 추천\n웹 - https 배포, RDS 구축, JWT 토큰 적용,운동 영상 추천, 좋아요 및 팔로우",
-    "[kakao-openbuilder 스킬 환경 구축]\n\n서버 환경을 결정할 때는 비용과 효율을 고려해야 했습니다. 초기에는 Lambda를 선택하여 서버리스 컴퓨팅을 시도했지만, Lambda는 Spring Boot 및 데이터베이스와 같은 추가적인 설정이 필요했습니다. 또한, Lambda의 cold start 문제와 함수 크기 제한으로 인해 Spring Boot를 사용할 때는 많은 최적화가 필요했습니다. 이에 따라 짧은 프로젝트 기간과 Spring Boot 환경을 고려하여 EC2를 선택했습니다."
-    +
-    "\n\n[AWS를 활용한 https 설정]\n\nHTTPS 보안 서버를 구축하기 위해 도메인 발급과 AWS의 Route53을 사용하여 도메인 소유를 인증하고, ACM으로 SSL 인증서를 발급 받았습니다. 또한, 모든 요청을 HTTPS로 리다이렉션하기 위해 Load Balancer에 규칙을 추가했습니다."
+    "[Kakao-openbuilder 스킬 환경 고민]\n"
+   + "[AWS를 활용한 HTTPS 설정]"
 );
 
 addProject(HealthPanda, "backend", "contain", "center");
@@ -384,10 +380,8 @@ const butok = new Project(
     "https://github.com/KimDohaAcc/Butok.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
     "회원의 선호 기반 매물 추천, 보안, 회원 관련 기능 구현",
-    "[Spring security 적용]\n\n"
-    + "Spring security 2.7 버전을 사용하여 비밀번호를 암호화 하였으며, 회원과 관리자의 역할을 나눠 관리자 페이지의 접근을 막았습니다. 그 과정에서 필요한 config 파일 작성 방법과 보안 처리를 익힐 수 있었으며, jsp에서 spring security tag library를 활용하여 간편하게 권한 확인을 할 수 있었습니다."
-    + "\n\n[pageable을 활용한 pagination 처리]\n\n"
-    + "Pageable을 이용하여 페이지네이션 처리를 구현하였습니다. 전월세 데이터가 많이 존재하는 경우 페이지네이션으로 데이터를 효율적으로 관리하고 사용자에게 보다 편리한 서비스를 제공할 수 있었습니다."
+    "[Spring security 적용]\n"
+    +"[pageable을 활용한 pagination 처리]"
 );
 
 addProject(butok, "backend", "contain", "center");
@@ -406,9 +400,28 @@ const GamjaMarket = new Project(
     "https://github.com/KimDohaAcc/GamjaMarket.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️",
     "판매자와 구매자 1:1 채팅, 자유게시판 기능 구현",
-    "[firebase의 realtime-database를 활용한 채팅 구현]\n\n"
-    + "Firebase의 Realtime Database를 활용하여 실시간 채팅 및 채팅 알람 기능을 구현했습니다. 이를 통해 사용자들이 실시간으로 채팅할 수 있으며, 새로운 메시지가 도착하면 메인 화면에 알림을 표시했습니다. 이를 통해 실시간 데이터 처리 및 알림 시스템을 구축하면서 Message Listener에 대한 개념을 익혔습니다."
+    "[firebase의 realtime-database를 활용한 채팅 구현]\n"
 );
 
 addProject(GamjaMarket, "backend", "contain", "center");
+
+
+const Portfolio = new Project(
+    "/",
+    "/resources/images/portfolio.png",
+    "Portfolio",
+    "김도하의 포트폴리오",
+    "상시 업데이트 중",
+    ['Vanila JS'],
+    ['None'],
+    ['None'],
+    ['html', 'css'],
+    ["1997.04.10", "2099.04.10"],
+    "https://doha-portfolio.site/",
+    "🙋‍♀️",
+    "기획, 설계, 개발, 테스트",
+    "[백엔드 개발자의 프론트엔드 도전기]"
+);
+
+addProject(Portfolio, "backend", "contain", "center");
 

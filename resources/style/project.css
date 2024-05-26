@@ -72,7 +72,6 @@ a:hover {
 .project-introduce th,
 .project-introduce td {
     border: 2px solid #ddd;
-    /* Changed border thickness */
     padding: 8px 0;
     width: 10px;
     text-align: center;
@@ -88,8 +87,8 @@ a:hover {
 }
 
 /* Alternating row background color */
-.project-introduce tr:nth-child(even) {
-    background-color: #f2f2f2;
+.project-introduce tr td {
+    background-color: #fcfcfc;
     /* Even row background color */
 }
 

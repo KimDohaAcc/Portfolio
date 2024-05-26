@@ -46,6 +46,44 @@
             color: #666;
             /* Text color for the second column */
         }
+
+        
+        ul {
+            list-style: none;
+        }
+
+        ul>li {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .td-table {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .project-introduce td table {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .project-introduce td table tr td:first-child {
+            background-color: #f2f2f2 !important;
+            /* 배경색 제거 */
+        }
+
+        .project-introduce td table tr td:last-child {
+            padding: 0 30px;
+            /* 셀 패딩 추가 */
+        }
+
+        .example-img {
+            width: 50vw;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -62,11 +100,49 @@
                 </tr>
                 <tr>
                     <td><strong>기간</strong></td>
-                    <td>2024년 2월 19일 → 2024년 3월 18일</td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>기획</strong></td>
+                                <td>2024.02.19 - 2024.02.28</td>
+                            </tr>
+                            <tr>
+                                <td><strong>설계</strong></td>
+                                <td>2024.02.28 - 2024.03.08</td>
+                            </tr>
+                            <tr>
+                                <td><strong>개발</strong></td>
+                                <td>2024.03.08 - 2024.03.29</td>
+                            </tr>
+                            <tr>
+                                <td><strong>테스트</strong></td>
+                                <td>2024.03.29 - 2024.04.08</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>사용 기술</strong></td>
-                    <td>JAVA, SpringBoot, SpringSecurity, JPA, React, MySQL, Redis, Apache Kafka, NginX, Docker, Jenkins, Jira, Gitlab</td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td>Java, Python, Typescript</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frameworks & Libraries</strong></td>
+                                <td>SpringBoot, SpringSecurity, JPA, React</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Databases</strong></td>
+                                <td>MySQL, Redis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Other Technologies</strong></td>
+                                <td>Apache Kafka, Nginx, Docker, Jenkins, Jira, Gitlab</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>한 줄 설명</strong></td>
@@ -74,7 +150,7 @@
                 </tr>
                 <tr>
                     <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>6명 (팀장)</td>
+                    <td>🙋‍♀️🙋‍♂️🙋🧞‍♀️🙋‍♂️🙋 6명 (팀장)</td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -85,39 +161,44 @@
             </table>
         </section>
         <section class="project-description">
+            <h2>🎁 UI</h2>
+            <img class="ui" src="resources/images/toby_메인페이지.gif" alt="프로젝트 이미지">
+            <br>
+            <img class="ui" src="resources/images/물체.GIF" alt="프로젝트 이미지">
+            <br>
+            <img class="ui" src="resources/images/그림.GIF" alt="프로젝트 이미지">
+            <br>
             <h2>📖 프로젝트 소개</h2>
-            <p>미취학 아동이 체험형 스토리를 통해 언어 및 올바른 행동양식을 학습하는 서비스로, AI 퀴즈를 맞추며 동화 스토리를 체험할 수 있습니다. AI 모델로는 사물 인식, 감정 인식, 그림 인식을 사용하였습니다.</p>
+            <p>아동이 언어 및 올바른 행동양식을 학습하는 서비스로, <strong>AI 퀴즈를 맞추며 동화 스토리를 체험</strong>할 수 있습니다.</p>
             <br>
-            <p>퀴즈를 맞추면 당근의 레벨이 올라가 아이들의 성취감을 높입니다. 한 스토리를 끝내면 스테이지 클리어 기념 사진을 촬영하여 재미 요소를 더했습니다.</p>
+            <p>퀴즈를 맞추면 <strong>당근의 레벨</strong>이 올라가 성취감을 높입니다.</p>
             <br>
-            <p>비밀번호로 잠겨 있는 부모페이지에서는 아이의 정답 통계 그래프 및 또래 아이와의 비교 그래프를 볼 수 있으며, 아이가 푼 퀴즈를 재채점할 수 있습니다.</p>
+            <p>한 스토리를 끝내면 <strong>스테이지 클리어 기념 사진</strong>을 촬영하여 재미 요소를 더했습니다.</p>
             <br>
-            <p>ver 1.0 배포 후 실제 아동 사용자의 피드백을 반영하여 튜토리얼을 삽입한 1.1 버전을 배포하였습니다.</p>
+            <p>비밀번호로 잠겨 있는 부모페이지에서는 <strong>정답 통계 그래프</strong> 및 <strong>또래 아이와의 비교 그래프</strong>를 볼 수 있으며, 아이가 푼 퀴즈를 <strong>재채점</strong>할 수 있습니다.</p>
+            <br>
+            <p>ver 1.0 배포 후 실제 아동 사용자의 피드백을 반영하여 <strong>튜토리얼을 삽입한 1.1 버전</strong>을 배포하였습니다.</p>
             <br>
             <br>
             <p><strong>기술 특장점</strong></p>
+            <br>
             <ul>
-                <li>Kafka 메시지 브로커를 사용해 Spring 서버에서 분석 요청을 보내고 메시지를 받은 Python 서버에서 AI 분석을 실행하여 빠른 응답 속도를 제공합니다.</li>
-                <li>Redis를 사용해 분석 결과를 캐싱하며, 폴링 요청에 대해 Redis 데이터를 클라이언트로 반환합니다.</li>
-                <li>장소 및 스토리의 확장 가능성을 고려하여 DB를 설계했습니다.</li>
-                <li>MobileNet, InceptionV3 모델과 Pytorch로 학습된 AI 모델을 감정 퀴즈, 인지 퀴즈, 그림 퀴즈 분석에 활용했습니다.</li>
-                <li>PWA를 적용하여 사용자 경험을 향상했습니다.</li>
+                <li>Kafka를 사용해 <strong>비동기로 AI 분석</strong>을 실행하며 서버 오류 및 응답 지연을 고려했습니다.</li>
+                <li>MobileNet, InceptionV3 모델과 Pytorch로 학습된 AI 모델을 <strong>감정 퀴즈, 인지 퀴즈, 그림 퀴즈</strong> 분석에 사용하여 다양한 퀴즈를 구현했습니다.</li>
+                <li>장소 및 스토리의 <strong>확장 가능성</strong>을 고려하여 DB를 설계했습니다.</li>
+                <li><strong>PWA</strong>를 적용하여 사용자 경험을 향상했습니다.</li>
             </ul>
             <br><br>
             <h2>🙋‍♂️ 역할</h2>
             <p>스토리 관련 API 구현</p>
             <br>
-            <p>Docker, Nginx를 활용한 인프라 구축</p>
+            <p>서버 인프라 구축</p>
             <br>
-            <p>Jenkins CI/CD 구축</p>
+            <p>Jenkins 파이프라인 구축</p>
             <br>
-            <p>배포 시 발생하는 오류 해결</p>
+            <p>AI 모델 테스트</p>
             <br>
-            <p>AI 모델 검증</p>
             <br>
-            <h2>🎁 UI</h2>
-            <img class="ui" src="resources/images/toby_메인페이지.gif" alt="프로젝트 이미지">
-            <br><br>
             <h2>🎠 ERD</h2>
             <img  class="ui" src="resources/images/toby_ERD.PNG">
             <br><br>
@@ -125,8 +206,8 @@
             <img  class="ui" src="resources/images/toby_시스템 아키텍처.png">
             <br>
             <ul>
-                <li>Kafka를 통해 Spring과 Python 서버가 통신합니다</li>
-                <li>AI 결과는 Redis에 저장하고 클라이언트는 폴링으로 분석 결과를 요청합니다</li>
+                <li>Kafka를 통해 <strong>AI 분석</strong>을 요청합니다</li>
+                <li>AI 결과는 <strong>Redis에 저장</strong>하고 클라이언트는 <strong>폴링으로 분석 결과를 요청</strong>합니다</li>
                 <li>이미지는 S3에, 로그는 디스코드에 저장합니다</li>
                 <li>Jenkins와 Docker를 이용해 CI/CD와 컨테이너화를 구축했습니다</li>
             </ul>
@@ -134,20 +215,40 @@
             <h2>🎯 기술 리뷰</h2>
             <p>[Docker 컨테이너와 Nginx의 활용]</p>
             <br>
-            <p>React, Spring Boot, Python, Kafka, Redis, MySQL을 각각 Docker 컨테이너에 담아 Docker 네트워크로 연결하여 서버를 구축했습니다. Python AI 서버는 AI 모델 구동을 위한 라이브러리 때문에 상당히 무거웠습니다. 그래서 구동 효율성을 높이기 위해 라이브러리, 모델 등 환경 설정 Docker 이미지와 코드가 담기는 이미지를 분리하고 Python 이미지를 만드는 Dockerfile에 환경 설정 이미지를 포함하여 구동 시간을 줄일 수 있었습니다. 또한, Nginx 리버스 프록시를 적용하여 프론트엔드와 백엔드 요청을 분리해서 처리하였으며, SSL 인증서를 발급하여 HTTPS를 적용했습니다. 이를 통해 인프라 구축에 대한 실전 경험을 쌓을 수 있었습니다.</p>
+            <p>Python AI 서버의 구동 효율성을 높이기 위해 Docker Image를 분리했습니다. 
+                라이브러리, 모델 등 <strong>환경 설정 Image와 코드가 담기는 Image를 분리</strong>하고 
+            <strong>Dockerfile에 환경 설정 Docker Image를 포함하여</strong> 서버 구동 시간을 줄일 수 있었습니다.<br><br>
+                또한, Docker Network 구성, Nginx 리버스 프록시 적용, SSL 인증서 발급을 통해 인프라 구축에 대한 실전 경험을 쌓을 수 있었습니다.</p>
             <br>
             <p>[Jenkins 파이프라인을 이용한 CI/CD 구축]</p>
+            <img class="example-img" src="resources/images/script.png">
             <br>
-            <p>Gitlab과 Jenkins를 연동하여 브랜치로 커밋이 발생하면 자동으로 새로운 컨테이너를 올릴 수 있도록 구축했습니다. 개발 과정에서는 배포 시 발생하는 문제를 빠르게 볼 수 있도록 각 'feature/기능' 브랜치에 커밋이 발생하면 관련된 컨테이너를 중지하고 새로운 이미지를 만들어 컨테이너를 올렸습니다. 반면 변화가 적은 MySQL, Redis 등의 컨테이너는 파이프라인을 구축하지 않고 직접 서버에서 컨테이너를 생성하였습니다. Gitlab에는 env 파일을 올리지 않기 때문에, 필요한 환경 변수를 어떻게 추가해줄지 고민했습니다. 서버에 환경 변수 파일을 올려두거나 파이프라인에 환경 변수를 직접 넣어주는 것은 보안 상 좋지 않다고 생각하여 Jenkins가 지원하는 기능을 조사한 뒤 Jenkins의 Secrete File을 활용하여 변수로 넣어주었습니다. 이 경험으로 편리하고 효율적인 배포를 고민해볼 수 있었습니다.</p>
+            <p>개발 과정에서 배포 시 발생하는 문제를 빠르게 볼 수 있도록 'feature/기능' 브랜치에 <strong>커밋이 발생</strong>하면 
+                컨테이너를 중지하고 새로운 이미지를 만들어 컨테이너를 올렸습니다. 
+                Gitlab에는 env 파일을 올리지 않기 때문에, 필요한 환경 변수를 어떻게 추가해줄지 고민했습니다. 
+                서버에 환경 변수 파일을 올려두거나 파이프라인에 환경 변수를 직접 넣어주는 것은 보안 상 좋지 않다고 생각하여 
+                Jenkins의 <strong>Secrete File</strong>을 활용하였습니다.</p>
             <br>
             <p>[PWA 서비스 워커의 캐시 문제 해결]</p>
             <br>
-            <p>프론트엔드에서 PWA를 적용하면서 캐시 문제가 발생했습니다. 백엔드 요청에 대하여 서비스 워커가 프론트엔드 캐시를 돌려줘 백엔드의 응답을 받을 수가 없었습니다. 프로젝트에서 발생하는 문제는 1. 백엔드 엔드포인트에 대해 서비스 워커 캐시를 찾아 돌려주는 걸 막는 설정이 없으며 2. 설정을 추가하여도 플러그인의 디폴트 설정으로 빌드 시 서비스 워커가 초기화 되고 있는 것이었습니다. 이를 해결하기 위해 vite-pwa 공식 문서와 서비스 워커 설정 파일을 공부하여 프로젝트에 맞는 설정 파일을 구성했습니다. PWA를 적용한 다른 팀에도 동일한 문제가 발생한다는 것을 듣고 노션에 설정 방법을 기록해 공유하였습니다. 이 덕분에 다른 팀으로부터 감사 인사를 듣는 값진 경험을 하였습니다.</p>
+            <p>프론트엔드에서 PWA를 적용하면서 백엔드 요청을 프론트엔드의 캐시로 돌려주는 캐시 문제가 발생했습니다. 
+                프로젝트에서 발생하는 문제는 
+                1. 백엔드 엔드포인트에 대해 <strong>서비스 워커 캐시를 찾아 돌려주는 걸 막는</strong> 설정이 없으며 
+                2. 설정을 추가하여도 <strong>플러그인의 디폴트 설정으로 빌드 시 서비스 워커가 초기화</strong> 되고 있는 것이었습니다. 
+                이를 해결하기 위해 vite-pwa 공식 문서와 서비스 워커 설정 파일을 공부하여 <strong>백엔드로의 요청을 캐싱하지 않도록</strong> 구성했습니다. 
+                추후 다른 팀도 같은 문제를 겪고 있음을 인지하고 노션으로 배포하여 팀 간 공유하였습니다.</p>
             <br>
-            <p>[AI 모델 성능 검증]</p>
+            <p>[AI 물체 분석 결과 개선]</p>
+            <img class="example-img" src="resources/images/top5.png">
             <br>
-            <p>물체 감지, 표정 인식, 그림 인식 AI 퀴즈 기능을 구현하기 위해 MobileNet, InceptionV3 을 추가 학습 시킨 모델과 Pytorch으로 학습된 모델의 성능을 검증했습니다. Keras, Tensorflow 등의 공식 문서를 탐독하여 검증에 필요한 Python 코드를 작성하고 확보한 AI 모델에 사물, 그림, 표정 이미지 데이터를 넣어 결과를 분석했습니다. 이를 통해 가장 성능이 좋은 모델을 프로젝트에 활용하였으며, AI 모델 활용 역량을 한층 성장시킬 수 있었습니다.</p>
-        </section>
+            <p></p>
+                물체 분석을 위한 기존 로직은 분석 결과 중 가장 일치율이 높은 것이 정답과 일치하는지 여부를 확인하는 것이었습니다. 
+                그러나 가장 일치하는 것이 전혀 다른 물건일 경우도 있었을 뿐만 아니라
+                정확한 분류가 아닌 비슷한 분류로 찾는 경우도 있어 정답률이 10%에 그쳤습니다.<br><br>
+                이를 개선하기 위해 데이터 사전에서 <strong>비슷한 분류의 모든 사물을 담는 배열</strong>을 만든 후, 
+                AI의 사물 분석 결과 중 <strong>상위 5개를 컵 데이터 배열과 비교</strong>해서 일치하는 값이 있다면 정답 처리를 하였습니다. 
+                이를 반영한 후에 <strong>정답률이 95%</strong>로 나오며 성공적으로 개선되었습니다.
+            </section>
     </div>
 </body>
 </html>

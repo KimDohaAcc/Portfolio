@@ -7,6 +7,45 @@
     <link rel="shortcut icon" href="resources/images/mommyletter.png">
     <link rel="stylesheet" href="resources/style/project.css">
     <title>마미레터</title>
+    <style>
+        
+        ul {
+            list-style: none;
+        }
+
+        ul>li {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .td-table {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .project-introduce td table {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .project-introduce td table tr td:first-child {
+            background-color: #f2f2f2 !important;
+            /* 배경색 제거 */
+        }
+
+        .project-introduce td table tr td:last-child {
+            padding: 0 50px;
+            /* 셀 패딩 추가 */
+        }
+
+        .example-img {
+            width: 50vw;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="project-container">
@@ -22,12 +61,49 @@
                 </tr>
                 <tr>
                     <td><strong>기간</strong></td>
-                    <td>2023년 1월 3일 → 2023년 2월 16일</td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>기획</strong></td>
+                                <td>2024.01.03 - 2024.01.14</td>
+                            </tr>
+                            <tr>
+                                <td><strong>설계</strong></td>
+                                <td>2024.01.15 - 2024.01.20</td>
+                            </tr>
+                            <tr>
+                                <td><strong>개발</strong></td>
+                                <td>2024.01.21 - 2024.02.12</td>
+                            </tr>
+                            <tr>
+                                <td><strong>테스트</strong></td>
+                                <td>2024.02.13 - 2024.02.16</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
-                    <td><strong>태그</strong></td>
-                    <td>Apache Kafka, Docker, Express.js, GitLab, JPA, Java, Jira, MariaDB, MongoDB, Nginx, React,
-                        SpringBoot, WebSocket</td>
+                    <td><strong>사용 기술</strong></td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td>Java, Typescript</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frameworks & Libraries</strong></td>
+                                <td>SpringBoot, SpringSecurity, JPA, React</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Databases</strong></td>
+                                <td>MariaDB, MongoDB</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Other Technologies</strong></td>
+                                <td>Apache Kafka, STOMP, Nginx, Jira, Gitlab</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>한 줄 설명</strong></td>
@@ -35,7 +111,7 @@
                 </tr>
                 <tr>
                     <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>6명 (팀원)</td>
+                    <td>🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋 6명 (팀원)</td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -46,33 +122,22 @@
             </table>
         </section>
         <section class="project-description">
-            <h2>📖 프로젝트 소개</h2>
-            <p>아이중심적인 대다수의 임산부 어플과 달리 임산부 중심의 SNS 어플</p>
-            <br>
-            <p>특히 임산부의 90%에게서 발생하는 산후우울감 및 산후우울증을 관리할 수 있는 서비스를 집중적으로 구상</p>
-            <br>
-            <p>육아일기 및 임산부 일기를 작성하여 자신의 감정을 되돌아볼 수 있는 감정 다이어리</p>
-            <br>
-            <p>피드, 채팅 좋아요, 댓글, 팔로우 기능을 제공해 임산부끼리 소통할 수 있는 SNS</p>
-            <br>
-            <p>거동이 불편한 임산부가 정신과 진료 예약, 비대면 화상 진료, 처방전 발급이 가능한 비대면 진료 서비스</p>
-            <br>
-            <p>수유실 정보 API를 활용한 수유실 지도</p>
-            <br>
-            <p><strong>기술 특장점</strong></p>
-            <ul>
-                <li>원하는 의사를 통하여 진료 예약이 가능하며, 의사는 권한을 허락한 사용자의 감정 일기를 열람하여 진료에 참고할 수 있습니다.</li>
-                <li>진료 후 처방전을 발급하여 의약품을 처방 받을 수 있습니다.</li>
-                <li>감정 일기는 산모 일기 / 육아 일기로 나누어지며 토글을 클릭하여 간편하게 전환할 수 있습니다.</li>
-                <li>오늘의 감정은 이모지를 통해 간단히 작성할 수 있습니다. 이모지의 감정을 분석하여 기간별 감정 그래프 및 통계를 제공합니다.</li>
-                <li>SNS를 통해 다른 임산부들과 소통하며 정보를 얻거나 감정을 공유할 수 있습니다.</li>
-            </ul>
-            <br>
             <p><strong>UI</strong></p>
             <img class="ui" src="resources/images/mom_ui.png" alt="프로젝트 이미지">
             <br>
+            <h2>📖 프로젝트 소개</h2>
+            <p>임산부의 90%에게서 발생하는 산후우울감 및 산후우울증을 관리할 수 있는 <strong>임산부 중심의 SNS 서비스</strong>입니다.</p>
+            <br>
+            <p>자신의 감정을 되돌아볼 수 있는 <strong>감정 일기</strong>를 제공하며, 기간별 <strong>감정 그래프 및 통계</strong>를 볼 수 있습니다.</p>
+            <br>
+            <p>같은 공감대를 가진 임산부의 <strong>게시물을 열람</strong>할 수 있으며 <strong>팔로워와 채팅</strong>할 수 있습니다.</p>
+            <br>
+            <p><strong>비대면 진료 서비스</strong>를 제공해 거동이 불편한 임산부를 고려했습니다.</p>
+            <br>
+            <p>수유실 정보 API를 활용한 <strong>수유실 지도</strong>가 있습니다.</p>
+            <br>
             <h2>🙋‍♂️ 담당 역할</h2>
-            <p>DirectMessage, GroupChat, 화상 통화, 피드, 댓글, 좋아요, 해시태그 구현</p>
+            <p>DirectMessage, GroupChat, 피드, 댓글, 좋아요, 해시태그 API 구현</p>
             <br>
             <h2>🎠 ERD</h2>
             <img  class="ui" src="resources/images/mom_erd.png">
@@ -83,9 +148,22 @@
             <br>
             <h2>🎯 기술 리뷰</h2>
             <br>
-            <p>[Kafka 및 MongoDB를 활용한 실시간 DirectMessage 구현]</p>
-            <p>Kafka를 사용하여 메시지 큐 및 이벤트 스트리밍을 구현하고, MongoDB를 데이터 저장 및 관리에 활용하여 안정적이고 확장 가능한 채팅 애플리케이션을 개발했습니다. 또한 STOMP를 사용하여 WebSocket을 통해 실시간 통신을 구현하여 사용자 간의 채팅을 가능하게 했습니다.</p>
-            <p>1:1 채팅 기능을 개발하던 중, 중반에 그룹채팅 기능을 추가해야 하는 상황이 발생했습니다. 저는 엔티티 설계를 고민하고 Kafka 관련 문서를 탐독하며 개념을 심도 있게 이해하고자 노력했습니다. 그룹채팅이 사용자 수만 다를 뿐 기존 채팅과 동일한 서비스가 요구된다는 걸 파악한 후 엔티티를 단일화하였습니다. 또한 Kafka 토픽을 1:1 채팅용과 그룹채팅용으로 분리한 후 메시지 리스너 코드를 수정하여 두 기능 모두에 Kafka를 성공적으로 적용할 수 있었습니다.</p>
+            <p><strong>[그룹채팅 기능 추가]</strong></p>
+            <br>
+            <p>1:1 채팅 기능을 개발하던 중간에 <strong>그룹채팅 기능을 추가</strong>하게 되었습니다. 
+                이를 위해 Kafka <strong>컨슈머를 1:1 채팅용과 그룹채팅용으로 분리</strong>하여 용도에 맞게 컨슈머의 <strong>batch를 튜닝</strong>했습니다. 
+                또한 채팅방 엔티티를 만들고 토픽과 메시지 리스너 코드를 수정하였습니다.
+                이 경험을 통해 <strong>구체적이고 확정된 설계의 중요성</strong>을 깨달았습니다.
+            </p>
+            <br>
+            <p><strong>[Gerrit을 활용한 코드 리뷰]</strong></p>
+            <br>
+            <p>Google에서 개발한 코드 리뷰 툴인 Gerrit을 활용하여 프로젝트의 코드 리뷰를 진행하였습니다.
+                Github의 Pull Request나 Gitlab의 Merge Request만 활용하여 코드 리뷰를 해오다가 
+                처음으로 코드 리뷰 툴을 활용해볼 수 있었습니다. 
+                커밋 단위로 신속하게 코드 리뷰를 하며 피드백을 받아볼 수 있었으며, 리뷰를 하지 않으면 레포지토리에 올라가지 않아 
+                모든 팀원들이 코드 리뷰에 적극적으로 참여하는 경험을 할 수 있었습니다.
+            </p>
         </section>
     </div>
 </body>

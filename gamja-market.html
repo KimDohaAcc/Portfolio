@@ -48,6 +48,46 @@
             color: #666;
             /* Text color for the second column */
         }
+
+        
+            
+    ul {
+            list-style: none;
+        }
+
+        ul>li {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .td-table {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .project-introduce td table {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .project-introduce td table tr td:first-child {
+            background-color: #f2f2f2 !important;
+            /* 배경색 제거 */
+        }
+
+        .project-introduce td table tr td:last-child {
+            padding: 0 50px;
+            /* 셀 패딩 추가 */
+        }
+
+        .example-img {
+            width: 50vw;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
@@ -68,7 +108,26 @@
                 </tr>
                 <tr>
                     <td><strong>사용 기술</strong></td>
-                    <td>JAVA, mySQL, JSP, JS, AWS</td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td>Java, Vanilla JS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frameworks & Libraries</strong></td>
+                                <td>SpringBoot</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Databases</strong></td>
+                                <td>MySQL, Firebase, AWS RDS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Other Technologies</strong></td>
+                                <td>JSP, AWS EC2</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>한 줄 설명</strong></td>
@@ -76,7 +135,7 @@
                 </tr>
                 <tr>
                     <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>4명 (팀장)</td>
+                    <td>🙋‍♀️🙋‍♂️🙋🙋‍♀️ 4명 (팀장)</td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -86,16 +145,25 @@
         </section>
         <br>
         <section class="task">
+            <img class="ui" src="resources/images/map.png" alt="프로젝트 이미지">
+            <br>
+            <img class="ui" src="resources/images/chat-detail.png" alt="프로젝트 이미지">
+            <br>
             <h2>🙋‍♂️ 역할</h2>
             <p>판매자와 구매자 1:1 채팅, 자유게시판</p>
         </section>
         <br>
-        <img class="ui" src="resources/images/potato.png" alt="프로젝트 이미지">
-        <br>
         <section class="tech-review">
             <h2>🎯 기술 리뷰</h2>
-            <p>[firebase의 realtime-database를 활용한 채팅 구현]</p>
-            <p>Firebase의 Realtime Database를 활용하여 실시간 채팅 및 채팅 알람 기능을 구현했습니다. 이를 통해 사용자들이 실시간으로 채팅할 수 있으며, 새로운 메시지가 도착하면 메인 화면에 알림을 표시했습니다. 이를 통해 실시간 데이터 처리 및 알림 시스템을 구축하면서 Message Listener에 대한 개념을 익혔습니다.</p>
+            <br>
+            <p><strong>[firebase의 realtime-database를 활용한 채팅 구현]</strong></p>
+            <br>
+            <p>Realtime database에서는 데이터를 넣거나 검색하는 기능은 java로 처리할 수 있지만, 
+                메시지 리스너를 java로 제공하고 있지 않아 <strong>모든 로직을 javascript</strong>로 구현하였습니다. 
+                이 과정에서 <strong>ES6 문법으로 작성된 공식 문서의 config 파일을 읽는데 어려움</strong>이 있었습니다. 
+                공식 문서 외에 github와 개발 블로그 등을 찾아 다행히 바닐라 js 문법으로 바꿀 수 있었습니다.
+                이후 ES6 문법을 배우고자 <strong>vue.js</strong>를 공부하기도 했습니다.
+            </p>
         </section>
     </div>
 </body>

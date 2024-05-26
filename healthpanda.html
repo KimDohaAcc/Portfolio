@@ -46,6 +46,50 @@
             color: #666;
             /* Text color for the second column */
         }
+
+        
+        
+        ul {
+            list-style: none;
+        }
+
+        ul>li {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .td-table {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .project-introduce td table {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .project-introduce td table tr td:first-child {
+            background-color: #f2f2f2 !important;
+            /* 배경색 제거 */
+        }
+
+        .project-introduce td table tr td:last-child {
+            padding: 0 30px;
+            /* 셀 패딩 추가 */
+        }
+
+        .example-img {
+            width: 50vw;
+            padding: 20px 0;
+        }
+
+        .ui {
+            width: 50vw !important;
+            max-width: fit-content;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +110,26 @@
                 </tr>
                 <tr>
                     <td><strong>사용 기술</strong></td>
-                    <td>AWS, GitLab, JPA, Java, JavaScript, Kakao-openbuilder, MySQL, SpringBoot, Vue, node.js</td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td>Java, Vanilla JS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frameworks & Libraries</strong></td>
+                                <td>SpringBoot, JPA, Vue.js</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Databases</strong></td>
+                                <td>MySQL, AWS S3, AWS RDS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Other Technologies</strong></td>
+                                <td>AWS EC2, AWS ACM, kakao-i-openbuilder</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>한 줄 설명</strong></td>
@@ -74,7 +137,7 @@
                 </tr>
                 <tr>
                     <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>2명 (팀원)</td>
+                    <td>🙋‍♀️🙋‍♂️ 2명 (팀원)</td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -85,9 +148,16 @@
             </table>
         </section>
         <section class="project-description">
+            <img class="ui" src="resources/images/healthpanda-ui.png" alt="프로젝트 이미지">
+            <br>
             <h2>📖 프로젝트 소개</h2>
-            <p>헬스장 이용자들에게 편의를 제공하는 웹/챗봇 서비스로 마치 헬스 트레이너처럼 헬스 판다 챗봇이 사용자의 운동 출석 및 식단 관리를 해줍니다. 웹에서는 지점 안내, 상담 예약 등 헬스장
-                이용과 관련한 서비스를 제공하고 있습니다.</p>
+            <br>
+            <p>헬스장 이용자들에게 편의를 제공하는 <strong>웹/챗봇 서비스</strong>입니다.</p>
+            <br>
+            <p>마치 헬스 트레이너처럼 헬스 판다 챗봇이 사용자의 <strong>운동 출석 및 식단 관리</strong>를 해줍니다.</p>
+            <br>
+            <p>웹에서는 <strong>지점 안내, 상담 예약</strong> 등 헬스장 이용과 관련한 서비스를 제공하고 있습니다.</p>
+            <br>
             <br>
             <p><strong>주요 기능</strong></p>
             <ul>
@@ -95,21 +165,23 @@
                 <li>웹 : 운동 추천 영상, 지점별 상담 예약, 이용 후기, 좋아요 및 팔로우</li>
             </ul>
             <br>
-            <img class="ui" src="resources/images/healthPanda.png" alt="프로젝트 이미지">
-            <br>
             <h2>🙋‍♂️ 역할</h2>
             <p>챗봇 - 챗봇 개발 환경 구축, 식단 조회 및 기록, 식단 추천</p>
             <br>
             <p>웹 - HTTPS 배포, RDS 구축, JWT 토큰 적용, 운동 영상 추천, 좋아요 및 팔로우</p>
             <br>
             <h2>🎯 기술 리뷰</h2>
-            <p>[Kakao-openbuilder 스킬 환경 구축]</p>
-            <p>서버 환경을 결정할 때는 비용과 효율을 고려해야 했습니다. 초기에는 Lambda를 선택하여 서버리스 컴퓨팅을 시도했지만, Lambda는 Spring Boot 및 데이터베이스와 같은 추가적인
-                설정이 필요했습니다. 또한, Lambda의 cold start 문제와 함수 크기 제한으로 인해 Spring Boot를 사용할 때는 많은 최적화가 필요했습니다. 이에 따라 짧은 프로젝트
-                기간과 Spring Boot 환경을 고려하여 EC2를 선택했습니다.</p>
+            <br>
+            <p>[Kakao-openbuilder 스킬 환경 고민]</p>
+            <br>
+            <p>비용 절감을 위해 요청이 들어올 때만 실행되는 <strong>AWS Lambda를 활용한 서버리스 컴퓨팅을 시도</strong>했습니다. 
+                그러나 cold start 문제와 함수 크기 제한으로 인해 Spring Boot를 사용할 때는 많은 최적화가 필요했습니다. 
+                그렇기에 배포 EC2 서버에 스킬 환경을 구축하는 것으로 결정했지만, 환경을 고민해보는 유의미한 시간이었습니다.</p>
             <br>
             <p>[AWS를 활용한 HTTPS 설정]</p>
-            <p>HTTPS 보안 서버를 구축하기 위해 도메인 발급과 AWS의 Route53을 사용하여 도메인 소유를 인증하고, ACM으로 SSL 인증서를 발급 받았습니다. 또한, 모든 요청을 HTTPS로
+            <br>
+            <p><strong>HTTPS 보안 서버를 구축</strong>하기 위해 도메인 발급과 AWS의 Route53을 사용하여 도메인 소유를 인증하고, 
+                ACM으로 SSL 인증서를 발급 받았습니다. 또한, 모든 요청을 HTTPS로
                 리다이렉션하기 위해 Load Balancer에 규칙을 추가했습니다.</p>
         </section>
     </div>

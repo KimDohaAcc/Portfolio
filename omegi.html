@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/images/omegi-logo.PNG">
+    <link rel="stylesheet" href="resources/style/project.css">
+    <title>_Omegi_</title>
+    <style>
+        .logo-container img {
+            width: 70px;
+            margin-right: 20px;
+            padding-bottom: 10px;
+        }
+
+        .project-introduce th {
+            background-color: #b3a7d7;
+            /* Header background color */
+            color: #ffffff;
+            /* Header text color */
+            font-weight: bold;
+            /* Bold header text */
+        }
+
+        /* Alternating row background color */
+        .project-introduce tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Even row background color */
+        }
+
+        /* Highlighted row background color */
+        .project-introduce tr.highlight {
+            background-color: #bcd4e1;
+            /* Highlighted row background color */
+        }
+
+        /* Apply different style to the first column */
+        .project-introduce tr td:first-child {
+            font-weight: bold;
+            /* Bold text for the first column */
+            background-color: #bcd4e1;
+            /* Text color for the first column */
+        }
+
+        /* Apply different style to the second column */
+        .project-introduce tr td:last-child {
+            color: #666;
+            /* Text color for the second column */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul>li {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .td-table {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .project-introduce td table {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .project-introduce td table tr td:first-child {
+            background-color: #f2f2f2 !important;
+            /* 배경색 제거 */
+        }
+
+        .project-introduce td table tr td:last-child {
+            padding: 0 50px;
+            /* 셀 패딩 추가 */
+        }
+
+        .example-img {
+            width: 50vw;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project-container">
+        <div class="logo-container">
+            <img src="resources/images/omegi-logo.PNG" alt="오메기 로고">
+            <h1>_Omegi_</h1>
+        </div>
+        <section class="project-introduce">
+            <table>
+                <tr>
+                    <th style="text-align: center;"><strong>항목</strong></th>
+                    <th style="text-align: center;"><strong>내용</strong></th>
+                </tr>
+                <tr>
+                    <td><strong>기간</strong></td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>기획</strong></td>
+                                <td>2024.04.03 - 2024.04.15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>설계</strong></td>
+                                <td>2024.04.16 - 2024.04.23</td>
+                            </tr>
+                            <tr>
+                                <td><strong>개발</strong></td>
+                                <td>2024.04.24 - 2024.05.12</td>
+                            </tr>
+                            <tr>
+                                <td><strong>테스트</strong></td>
+                                <td>2024.05.13 - 2024.05.20</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>사용 기술</strong></td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td>Java, Python, Typescript</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frameworks & Libraries</strong></td>
+                                <td>SpringBoot, SpringSecurity, JPA, React</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Databases</strong></td>
+                                <td>MySQL, MongoDB, Redis, Elasticsearch</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Other Technologies</strong></td>
+                                <td>Apache Kafka, RabbitMQ, Nginx, Docker, Jenkins, Jira, Gitlab</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>한 줄 설명</strong></td>
+                    <td>오류를 자동으로 추적 및 분석하며, 해결 과정을 노트로 남길 수 있는 서비스</td>
+                </tr>
+                <tr>
+                    <td><strong>개발 인원<br>(역할)</strong></td>
+                    <td>🙋‍♀️🧞‍♀️🙋🧟‍♀️🙋‍♂️🙋 6명 (팀원)</td>
+                </tr>
+                <tr>
+                    <td><strong>Github</strong></td>
+                    <td><a href="https://github.com/TeamOmegi">https://github.com/TeamOmegi</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="project-description">
+            <h2>🎁 UI</h2>
+            <img class="ui" src="resources/images/ErrorList_ErrorDetail.gif" alt="프로젝트 이미지">
+            <br>
+            <img class="ui" src="resources/images/NoteGraph.gif" alt="프로젝트 이미지">
+            <br>
+            <img class="ui" src="resources/images/Guide.gif" alt="프로젝트 이미지">
+            <br>
+            <h2>📖 프로젝트 소개</h2>
+            <p>실시간으로 사용자의 <strong>서비스 로그를 수집</strong>하고 <strong>에러 노트를 작성</strong>할 수 있는 서비스입니다.</p>
+            <br>
+            <p>사용자의 프로젝트별로 <strong>대시보드</strong>, 
+            <strong>에러 목록, 노트 기능</strong>을 제공합니다.</p>
+            <br>
+            <p>서비스 간 요청의 흐름을 보여주는 <strong>Trace</strong>, 에러 요약인 <strong>Summary</strong>, 
+                에러 원문인 <strong>Log</strong>로 에러를 상세하게 구성했습니다.</p>
+            <br>
+            <p>사용자의 서비스에서 사용할 수 있는 <strong>로그 계측기</strong>를 지원합니다.</p>
+            <br>
+            <p><strong>기술 특장점</strong></p>
+            <br>
+            <ul>
+                <li>SSE를 통한 <strong>실시간 알림 기능</strong>을 제공하여 사용자의 서비스에서 에러 발생 시 알림이 표시됩니다.</li>
+                <li>사용자는 <strong>코드의 수정 없이</strong> Java 및 Python <strong>자동 계측기</strong>를 통해 로그를 내보낼 수 있습니다.</li>
+                <li><strong>D3 그래프</strong>를 사용해 노트 간 연결을 시각화했습니다.</li>
+            </ul>
+            <br><br>
+            <h2>🙋‍♂️ 역할</h2>
+            <p>Java Instrumentation 제작</p>
+            <br>
+            <p>정상 응답 가공 및 전송 로직 구현</p>
+            <br>
+            <p>서버 인프라 구축</p>
+            <br>
+            <br>
+            <h2>🎠 ERD</h2>
+            <img class="ui" src="resources/images/omegi_erd.png">
+            <br><br>
+            <h2>🧵 시스템 아키텍처</h2>
+            <img class="ui" src="resources/images/omegi_architecture.jpg">
+            <br>
+            <ul>
+                <li><strong>모든 요청의 로그가 수신</strong>될 때까지 Kafka 메시지를 <strong>Elasticsearch에 저장</strong>하고, <strong>Redis 작업 큐</strong>에 작업을 올려둡니다</li>
+                <li>모든 요청이 들어오면 가공하여 <strong>MongoDB에 에러 데이터</strong>를, <strong>MySQL에 에러 정보</strong>를 저장합니다</li>
+                <li>RabbitMQ로 메인 서버에 <strong>에러 발생</strong>을 알립니다</li>
+                <li>메인 서버의 Redis는 사용자의 <strong>리프레시 토큰을 저장</strong>하는 용도입니다</li>
+            </ul>
+            <br><br>
+            <h2>🎯 기술 리뷰</h2>
+            <p><strong>[Custom JavaAgent 제작]</strong></p>
+            <img class="example-img" src="resources/images/javaagent.png">
+            <br>
+            <p>Opentelemetry에서 제공하는 자동 계측기 JavaaAgent를 기반으로 Custom JavaAgent를 구성했습니다.<br>
+                프로젝트에 맞게 커스텀한 <strong>로그 수출 Exporter</strong>, 다른 서버로 넘기는 <strong>요청의 추적을 돕는 Propagator</strong>,<br> 
+                <strong>메소드 단위 계측</strong>을 가능하게 하는 <strong>Extension</strong>을 제작하고 메타 정보를 수정하여 새로운 JavaAgent를 만들었습니다.
+            </p>
+            <br>
+            <br>
+            <p><strong>[Kafka Consumer 확장]</strong></p>
+            <br>
+            <p>기존에는 단일 파티션에 단일 컨슈머를 두고 있어 1초에 약 400개의 메시지 밖에 처리할 수 없어 여유 메모리 1GB 안에서 Kafka의 성능을 높이고자 하였습니다.<br><br>
+                데이터의 크기를 10KB로 가정하고 <strong>파티션을 1개 늘릴 때 약 2MB의 메모리</strong>를, 
+                <strong>Consumer Thread를 1개 늘릴 때 약 60MB 메모리</strong>를 더 사용하는 것으로 계산했습니다.
+                컨슈머 스레드와 파티션을 10개로 두었을 때 <strong>1초에 약 1104개</strong>의 메시지를 소비할 수 있으며, 
+                메모리 사용량은 약 600(Thread) + 32(Buffer) + 20MB(Segment & Index) = <strong>652MB</strong>입니다.<br><br>
+                컨슈머 개수가 많아질수록 처리량이 완만하게 증가하기 때문에 효용을 고려해 10개의 컨슈머를 두기로 결정하였습니다.
+            </p>
+            <br>
+            <br>
+            <p><strong>[배치 및 스케줄러 도입]</strong></p>
+            <img class="example-img" src="resources/images/flow.png">
+            <br>
+            <p>프로젝트에서 정상 응답 로그는 <strong>서비스의 흐름도를 갱신</strong>하는 역할을 합니다.
+                때문에 긴급한 처리가 필요하지 않아 <strong>배치와 스케줄러</strong>를 사용해 요청을 모아서 처리했습니다.<br><br>
+                Kafka Producer는 사용자 지정 간격에 따라 서비스 정상 로그를 내보내며, 1MB의 Max Batch Size로 <strong>모아서 처리</strong>됩니다.
+                한 개의 정상 로그가 수집 서버로 들어오면 <strong>Elasticsearch에 저장 후 스케줄을 등록</strong>합니다.
+                지정된 시간 후 Elasticsearch에 <strong>같은 요청 번호를 검색</strong>하고 요청이 <strong>하나의 흐름으로 연결</strong>된다면 
+                서비스 흐름 엔티티를 확인해 갱신합니다.
+            </p>
+            <br>
+            <p><strong>[Gerrit 리뷰 자동 기록]</strong></p>
+            <img class="example-img" src="resources/images/gerrit.png">
+            <br>
+            <p>Google에서 개발한 코드 리뷰 툴인 Gerrit을 활용하여 프로젝트의 코드 리뷰를 하였습니다. 
+                그러나 <strong>서버가 사라지면 코드 리뷰 내역도 사라진다는 아쉬움</strong>이 있어 리뷰를 기록하는 Jenkins 파이프라인을 
+                구성했습니다. Gerrit에 Open된 커밋이 Merge 되면 <strong>커밋 메시지 및 리뷰를 환경 변수에서 가져와</strong> 
+                내용을 가공한 후 리뷰용 레포지토리에 발행하여 코드 리뷰를 저장할 수 있었습니다.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
