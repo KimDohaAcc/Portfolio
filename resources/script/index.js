@@ -339,7 +339,7 @@ const MommyLetter = new Project(
     "https://github.com/KimDohaAcc/MommyLetter.git",
     "🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋",
     "DirectMessage, GroupChat, 피드, 댓글, 좋아요, 해시태그 API 구현",
-    "[그룹채팅 기능 추가\n]"
+    "[그룹채팅 기능 추가]\n"
     + "[Gerrit을 활용한 코드 리뷰]"
 
 );
@@ -420,7 +420,7 @@ const Portfolio = new Project(
     "https://doha-portfolio.site/",
     "🙋‍♀️",
     "기획, 설계, 개발, 테스트",
-    "[백엔드 개발자의 프론트엔드 도전기]"
+    "[백엔드 개발자의 포트폴리오 페이지 도전기]"
 );
 
 addProject(Portfolio, "backend", "contain", "center");
