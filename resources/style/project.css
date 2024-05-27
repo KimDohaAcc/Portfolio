@@ -115,7 +115,7 @@ a:hover {
 
 /* Image Styles */
 .ui {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     margin-top: 20px;
     display: block;
@@ -139,4 +139,8 @@ a:hover {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
+}
+
+.people {
+    padding: 0 70px;
 }

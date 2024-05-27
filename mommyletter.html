@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="resources/style/project.css">
     <title>마미레터</title>
     <style>
-        
         ul {
             list-style: none;
         }
@@ -47,6 +46,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="project-container">
         <div class="logo-container">
@@ -110,8 +110,17 @@
                     <td>임산부를 위한 SNS 모바일 웹</td>
                 </tr>
                 <tr>
-                    <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋 6명 (팀원)</td>
+                    <td><strong>개발 인원</strong></td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td style="background-color: #ffffff !important;">
+                                    <p class="people">🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋</p>
+                                <td style="padding: 0 30px; background-color: #f2f2f2 !important;"><strong>역할</strong></td>
+                                <td>팀원</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -136,22 +145,22 @@
             <br>
             <p>수유실 정보 API를 활용한 <strong>수유실 지도</strong>가 있습니다.</p>
             <br>
-            <h2>🙋‍♂️ 담당 역할</h2>
+            <h2>🙋‍♂️ 담당 기능</h2>
             <p>DirectMessage, GroupChat, 피드, 댓글, 좋아요, 해시태그 API 구현</p>
             <br>
             <h2>🎠 ERD</h2>
-            <img  class="ui" src="resources/images/mom_erd.png">
+            <img class="ui" src="resources/images/mom_erd.png">
             <br><br>
             <h2>🧵 시스템 아키텍처</h2>
-            <img  class="ui" src="resources/images/mom_arc.png">
+            <img class="ui" src="resources/images/mom_arc.png">
             <br>
             <br>
             <h2>🎯 기술 리뷰</h2>
             <br>
             <p><strong>[그룹채팅 기능 추가]</strong></p>
             <br>
-            <p>1:1 채팅 기능을 개발하던 중간에 <strong>그룹채팅 기능을 추가</strong>하게 되었습니다. 
-                이를 위해 Kafka <strong>컨슈머를 1:1 채팅용과 그룹채팅용으로 분리</strong>하여 용도에 맞게 컨슈머의 <strong>batch를 튜닝</strong>했습니다. 
+            <p>1:1 채팅 기능을 개발하던 중간에 <strong>그룹채팅 기능을 추가</strong>하게 되었습니다.
+                이를 위해 Kafka <strong>컨슈머를 1:1 채팅용과 그룹채팅용으로 분리</strong>하여 용도에 맞게 컨슈머의 <strong>batch를 튜닝</strong>했습니다.
                 또한 채팅방 엔티티를 만들고 토픽과 메시지 리스너 코드를 수정하였습니다.
                 이 경험을 통해 <strong>구체적이고 확정된 설계의 중요성</strong>을 깨달았습니다.
             </p>
@@ -159,12 +168,13 @@
             <p><strong>[Gerrit을 활용한 코드 리뷰]</strong></p>
             <br>
             <p>Google에서 <strong>개발한 코드 리뷰 툴</strong>인 <strong>Gerrit</strong>을 활용하여 프로젝트의 코드 리뷰를 진행하였습니다.
-                Github의 Pull Request나 Gitlab의 Merge Request만 활용하여 코드 리뷰를 해오다가 
-                처음으로 코드 리뷰 툴을 활용해볼 수 있었습니다. 
-                커밋 단위로 신속하게 코드 리뷰를 하며 피드백을 받아볼 수 있었으며, 리뷰를 하지 않으면 레포지토리에 올라가지 않아 
+                Github의 Pull Request나 Gitlab의 Merge Request만 활용하여 코드 리뷰를 해오다가
+                처음으로 코드 리뷰 툴을 활용해볼 수 있었습니다.
+                커밋 단위로 신속하게 코드 리뷰를 하며 피드백을 받아볼 수 있었으며, 리뷰를 하지 않으면 레포지토리에 올라가지 않아
                 모든 팀원들이 코드 리뷰에 적극적으로 참여하는 경험을 할 수 있었습니다.
             </p>
         </section>
     </div>
 </body>
+
 </html>

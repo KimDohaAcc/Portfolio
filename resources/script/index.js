@@ -425,3 +425,12 @@ const Portfolio = new Project(
 
 addProject(Portfolio, "backend", "contain", "center");
 
+window.Project = Project;
+window.addProject = addProject;
+window.Omegi = Omegi;
+window.TobysCarrotFarm = TobysCarrotFarm;
+window.MommyLetter = MommyLetter;
+window.HealthPanda = HealthPanda;
+window.butok = butok;
+window.GamjaMarket = GamjaMarket;
+window.Portfolio = Portfolio;

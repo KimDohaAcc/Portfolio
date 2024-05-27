@@ -23,6 +23,7 @@
             /* Bold header text */
         }
 
+
         /* Alternating row background color */
         .project-introduce tr:nth-child(even) {
             background-color: #f2f2f2;
@@ -82,7 +83,7 @@
         }
 
         .example-img {
-            width: 50vw;
+            width: 100%;
             padding: 20px 0;
         }
     </style>
@@ -151,8 +152,17 @@
                     <td>오류를 자동으로 추적 및 분석하며, 해결 과정을 노트로 남길 수 있는 서비스</td>
                 </tr>
                 <tr>
-                    <td><strong>개발 인원<br>(역할)</strong></td>
-                    <td>🙋‍♀️🧞‍♀️🙋🧟‍♀️🙋‍♂️🙋 6명 (팀원)</td>
+                    <td><strong>개발 인원</strong></td>
+                    <td class="td-table">
+                        <table>
+                            <tr>
+                                <td style="background-color: #ffffff !important;">
+                                    <p class="people">🙋‍♀️🙋‍♂️🙋🙋‍♀️🙋‍♂️🙋</p>
+                                <td style="padding: 0 30px; background-color: #f2f2f2 !important;"><strong>역할</strong></td>
+                                <td>팀원</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>Github</strong></td>
@@ -188,7 +198,7 @@
                 <li><strong>D3 그래프</strong>를 사용해 노트 간 연결을 시각화했습니다.</li>
             </ul>
             <br><br>
-            <h2>🙋‍♂️ 역할</h2>
+            <h2>🙋‍♂️ 담당 기능</h2>
             <p>Java Instrumentation 제작</p>
             <br>
             <p>정상 응답 가공 및 전송 로직 구현</p>

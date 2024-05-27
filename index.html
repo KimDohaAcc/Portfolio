@@ -18,8 +18,8 @@
 <body>
     <header class="mobile">
         <div>
-            <h1>Kim Doha Portfolio</h1>
-            <h4>개발에 대한 열정과 논리적 사고력을 가진 백엔드 개발자 김도하 입니다</h4>
+            <h1>KimDoha Portfolio</h1>
+            <h3>개발에 대한 열정과 논리적 사고력을 가진 백엔드 개발자 김도하 입니다</h3>
         </div>
         <div class="profile-tag tag">
             <span>Profile</span>
@@ -34,8 +34,8 @@
     <div class="container">
         <header class="web">
             <div>
-                <h1>Kim Doha Portfolio</h1>
-                <h4>개발에 대한 열정과 논리적 사고력을 가진 백엔드 개발자 김도하 입니다</h4>
+                <h1>KimDoha Portfolio</h1>
+                <h3>개발에 대한 열정과 논리적 사고력을 가진 백엔드 개발자 김도하 입니다</h3>
             </div>
             <div class="profile-tag tag">
                 <span>Profile</span>
@@ -51,217 +51,149 @@
             <section class="profile-section">
                 <article class="profile">
                     <img src="/resources/images/증명사진.jpg">
+                    <h4>😊 I am</h4>
                     <ul>
-                        <li>
-                            <h4>😊 I am</h4>
-                            <ul>
-                                <li>Backend Developer</li>
-                            </ul>
-                            <h4>🎂 Birth</h4>
-                            <ul>
-                                <li>1997.04.10</li>
-                            </ul>
-                            <h4>✉️ E-Mail</h4>
-                            <ul>
-                                <li>dorong0205@gmail.com</li>
-                            </ul>
-                            <h4>🐱 Github</h4>
-                            <ul>
-                                <li><a href="https://github.com/KimDohaAcc">github.com/KimDohaAcc</a></li>
-                            </ul>
-                            <h4>💾 Tech & Writing Blog</h4>
-                            <ul>
-                                <li><a href="https://doha-obsidian-blog.vercel.app/">doha-obsidian-blog.vercel.app</a>
-                                </li>
-                            </ul>
-                            <h4>🎒 Activities</h4>
-                            <ul>
-                                <li><b>삼성청년SW아카데미(SSAFY) 10기 수료</b><br>
-                                    SW 필수 지식과 알고리즘 중심의 교육<br>
-                                    및 프로젝트 수행 과정<br>
-                                    <i>2023.07.01 ~ 현재(1600시간)</i>
-                                </li>
-                                <li><b>자바(JAVA) 웹개발 프로그래밍 과정 수료</b><br>
-                                    Java 기반 학습 및 프로젝트 수행 과정<br>
-                                    <i>2022.12.21 ~ 2023.05.15(800시간)</i>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h4>⛏️ Skills</h4>
-                            <ul>
-                                <!-- 언어 (Languages) -->
-                                <li style="font-weight: bold;">Languages</li>
-                                <ul>
-                                    <li style="color: rgb(3, 199, 144); font-weight: bold;">Java
-                                        <span class="skill-level">★★★★☆</span>
+                        <li>Backend Developer</li>
+                        <li>Born on April 10, 1997</li>
+                    </ul>
+                    <h4>✉️ E-Mail</h4>
+                    <ul>
+                        <li>dorong0205@gmail.com</li>
+                    </ul>
+                    <h4>🐱 Github</h4>
+                    <ul>
+                        <li><a href="https://github.com/KimDohaAcc">github.com/KimDohaAcc</a></li>
+                    </ul>
+                    <h4>💾 Tech & Writing Blog</h4>
+                    <ul>
+                        <li><a href="https://doha-obsidian-blog.vercel.app/">doha-obsidian-blog.vercel.app</a></li>
+                    </ul>
+                    <div class="toast-button-container">
+                        <button id="activities-modal-button">Activities</button>
+                        <div id="activities-modal" class="toast-modal">
+                            <div class="toast-content">
+                                <span id="close-activities" class="close-toast">&times;</span>
+                                <span>🎒 Activities</span>
+                                <ul class="toast-ul">
+                                    <li><b>삼성청년SW아카데미(SSAFY) 10기 수료</b><br>
+                                        SW 필수 지식과 알고리즘 중심의 교육 및 프로젝트 수행 과정<br>
+                                        <i>2023.07.01 ~ 현재(1600시간)</i>
                                     </li>
-                                    <li>JavaScript
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Python
-                                        <span class="skill-level">★★☆☆☆</span>
+                                    <li><b>자바(JAVA) 웹개발 프로그래밍 과정 수료</b><br>
+                                        Java 기반 학습 및 프로젝트 수행 과정<br>
+                                        <i>2022.12.21 ~ 2023.05.15(800시간)</i>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                        <button id="skills-modal-button">Skills</button>
+                        <div id="skills-modal" class="toast-modal">
+                            <div class="skill-toast-content">
+                                <span id="close-skills" class="close-toast">&times;</span>
+                                <span style="font-size: 1.3em; font-weight: bold;">⛏️ Skills</span>
+                                <span id="skill-info">기술을 클릭하면 활용된 프로젝트를 볼 수 있습니다.</span>
+                                <div class="skill-toast-ul">
+                                    <!-- 언어 (Languages) -->
+                                    <div>
+                                        <p style="font-weight: bold;">Languages</p>
+                                        <ul>
+                                            <li style="color: rgb(3, 199, 144); font-weight: bold;">Java</li>
+                                            <li>Vanila JS</li>
+                                            <li>Python
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 프레임워크 (Frameworks) -->
+                                    <div>
+                                        <p style="font-weight: bold;">Frameworks</p>
+                                        <ul>
+                                            <li style="color: rgb(3, 199, 144); font-weight: bold;">SpringBoot
+                                            </li>
+                                            <li>JPA
+                                            </li>
+                                            <li>MyBatis
+                                            </li>
+                                            <li>Vue.js
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 데이터베이스 (Databases) -->
+                                    <div>
+                                        <p style="font-weight: bold;">Databases</p>
+                                        <ul>
+                                            <li>MySQL
+                                            </li>
+                                            <li>MariaDB
+                                            </li>
+                                            <li>MongoDB
+                                            </li>
+                                            <li>Oracle
+                                            </li>
+                                            <li>Redis
+                                            </li>
+                                            <li>Elasticsearch
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 메시지 브로커 (Message Brokers) -->
+                                    <div>
+                                        <p style="font-weight: bold;">Message Brokers</p>
+                                        <ul>
+                                            <li>Apache Kafka</li>
+                                            <li>RabbitMQ</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <!-- 도구 및 플랫폼 (Tools and Platforms) -->
+                                        <p style="font-weight: bold;">Tools and Platforms</p>
+                                        <ul>
+                                            <li>Docker</li>
+                                            <li>AWS RDS</li>
+                                            <li>AWS S3</li>
+                                            <li>AWS ACM</li>
+                                            <li>Git</li>
+                                            <li>Jenkins</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 웹 기술 (Web Technologies) -->
+                                    <div>
+                                        <p style="font-weight: bold;">Web Technologies</p>
+                                        <ul>
+                                            <li>JSP
+                                            </li>
+                                            <li>HTML5
+                                            </li>
+                                            <li>CSS3
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Education</button>
+                    </div>
+                    <li>
+                        <h4>⛏️ Skills</h4>
 
-                                <!-- 프레임워크 (Frameworks) -->
-                                <li style="font-weight: bold;">Frameworks</li>
-                                <ul>
-                                    <li style="color: rgb(3, 199, 144); font-weight: bold;">SpringBoot
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>JPA
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>myBatis
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Vue
-                                        <span class="skill-level">★★☆☆☆</span>
-                                    </li>
-                                </ul>
-
-                                <!-- 데이터베이스 (Databases) -->
-                                <li style="font-weight: bold;">Databases</li>
-                                <ul>
-                                    <li>MySQL
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>MariaDB
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>MongoDB
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>Oracle
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Redis
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Elasticsearch
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                </ul>
-
-                                <!-- 메시지 브로커 (Message Brokers) -->
-                                <li style="font-weight: bold;">Message Brokers</li>
-                                <ul>
-                                    <li>Kafka
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>RabbitMQ
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                </ul>
-
-                                <!-- 도구 및 플랫폼 (Tools and Platforms) -->
-                                <li style="font-weight: bold;">Tools and Platforms</li>
-                                <ul>
-                                    <li>Docker
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>AWS
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Git
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>Jenkins
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                </ul>
-
-                                <!-- 웹 기술 (Web Technologies) -->
-                                <li style="font-weight: bold;">Web Technologies</li>
-                                <ul>
-                                    <li>JSP
-                                        <span class="skill-level">★★★★☆</span>
-                                    </li>
-                                    <li>HTML5
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                    <li>CSS3
-                                        <span class="skill-level">★★★☆☆</span>
-                                    </li>
-                                </ul>
-                            </ul>
-                        </li>
-                        <li>
-                            <h4>📖 Education</h4>
-                            <ul>
-                                <li>2016.03 ~ 2021.08 Kyunghee Univ. Philosophy</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h4>🏅 Certificates</h4>
-                            <ul>
-                                <li>SQLD(2023)</li>
-                                <li>정보처리기사 필기(2023)</li>
-                            </ul>
-                        </li>
+                    </li>
+                    <li>
+                        <h4>📖 Education</h4>
+                        <ul>
+                            <li>2016.03 ~ 2021.08 Kyunghee Univ. Philosophy</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>🏅 Certificates</h4>
+                        <ul>
+                            <li>SQLD(2023)</li>
+                            <li>정보처리기사 필기(2023)</li>
+                        </ul>
+                    </li>
                     </ul>
                 </article>
             </section>
             <section class="projects">
                 <div class="backend">
-                    <!-- <article class="project-name">
-                        <a target="_blank" href="about:blank">
-                            <div class="project-img"></div>
-                        </a>
-                        <h3 class="title">프로젝트명 (Project Name)</h3>
-                        <h6 class="description">프로젝트에 대한 설명</h6>
-                        <div class="skills">
-                            <span>Java 11</span>
-                            <span>Spring Boot 2</span>
-                            <span>JSP</span>
-                            <span>Apache Tomcat 9</span>
-                            <span>Oracle</span>
-                            <span>REST API</span>
-                        </div>
-                        <span class="period">2023.04.01 ~ 2023.04.10</span>
-                    </article>
-                    <article class="project-name">
-                        <a target="_blank" href="about:blank">
-                            <div class="project-img"></div>
-                        </a>
-                        <h3 class="title">프로젝트명 (Project Name)</h3>
-                        <h6 class="description">프로젝트에 대한 설명</h6>
-                        <div class="skills">
-                            <span>Java 11</span>
-                            <span>Spring Boot 2</span>
-                            <span>JSP</span>
-                            <span>Apache Tomcat 9</span>
-                            <span>Oracle</span>
-                            <span>REST API</span>
-                        </div>
-                        <span class="period">2023.04.01 ~ 2023.04.10</span>
-                    </article>
-                    <article class="project-name">
-                        <a target="_blank" href="about:blank">
-                            <div class="project-img"></div>
-                        </a>
-                        <h3 class="title">프로젝트명 (Project Name)</h3>
-                        <h6 class="description">프로젝트에 대한 설명</h6>
-                        <div class="skills">
-                            <span>Java 11</span>
-                            <span>Spring Boot 2</span>
-                            <span>JSP</span>
-                            <span>Apache Tomcat 9</span>
-                            <span>Oracle</span>
-                            <span>REST API</span>
-                        </div>
-                        <span class="period">2023.04.01 ~ 2023.04.10</span>
-                    </article> -->
-                </div>
-                <hr>
-                <!-- <div class="backend-mini">
-                    <p class="project-type">BACK-END mini</p>
-                </div>
-                <hr>
-                <div class="frontend">
-                    <p class="project-type">FRONT-END</p>
-                </div> -->
             </section>
             <section class="interests">
                 <article>
@@ -286,24 +218,6 @@
                         style='background-image: url("resources/images/music.jpg"); background-size: contain;'></div>
                     <h6 style="background-color: white;">&nbsp;I am also a listener</h6>
                 </article>
-                <!-- <article>
-                    <a href="about blank">
-                        <div class="likes-img"></div>
-                    </a>
-                    <h6>나를 소개하는 관심사</h6>
-                </article>
-                <article>
-                    <a href="about blank">
-                        <div class="likes-img"></div>
-                    </a>
-                    <h6>나를 소개하는 관심사</h6>
-                </article>
-                <article>
-                    <a href="about blank">
-                        <div class="likes-img"></div>
-                    </a>
-                    <h6>나를 소개하는 관심사</h6>
-                </article> -->
             </section>
         </div>
     </div>
@@ -311,13 +225,13 @@
         <div class="info">
             <ul>
                 <li>Location : Seoul, Korea</li>
-                <li>Email : <a target="_blank" href="mailto:dorong0205@gmail.com">dorong0205@gmail.com</a></li>
                 <li>Phone : <a target="_blank" href="tel:010-8019-2156">010-8019-2156</a></li>
             </ul>
+            <address>copyrightⓒ 2023 All rights reserved by Doha Kim.</address>
         </div>
-        <address>copyrightⓒ 2023 All rights reserved by Doha Kim.</address>
     </footer>
     <script type="text/javascript" src="resources/script/index.js"></script>
+    <script type="text/javascript" src="resources/script/toast-modal.js"></script>
 </body>
 
 </html>
