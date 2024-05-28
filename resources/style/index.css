@@ -79,17 +79,13 @@ section {
     /* 호버 시 핸들의 배경색 */
 }
 
-
-
 .profile>img {
     width: 50%;
     padding: 10px;
     background-color: whitesmoke;
 }
 
-.projects div.backend,
-.projects div.frontend,
-.projects div.backend-mini {
+.projects div.backend {
     display: flex;
     flex-flow: wrap column;
     gap: 10px;
@@ -117,7 +113,7 @@ hr {
     height: 250px;
     padding: 10px;
     /*이거 바꾸면 article 아래 크기 길어짐*/
-    padding-bottom: 300px;
+    padding-bottom: 320px;
     background-color: whitesmoke;
 }
 
@@ -159,7 +155,8 @@ hr {
     margin: 0 20px;
     padding: 20px;
     margin-bottom: 20px;
-    min-height: 77vh;
+    height: fit-content;
+    min-height: 500px;
 }
 
 .detail-article p {
@@ -273,11 +270,8 @@ address {
     text-align: center;
 }
 
-.skill-level {
-    display: inline-block;
-    margin-left: 10px;
-    color: #FFD700;
-    /* gold color */
+.skills div {
+    margin-top: 5px;
 }
 
 .toast-button-container {
@@ -296,6 +290,12 @@ button {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.7em;
+    margin-top: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffe552;
 }
 
 .toast-modal {
@@ -344,6 +344,10 @@ button {
     font-size: 1.2em;
 }
 
+.skill-toast-ul li {
+    cursor: pointer;
+}
+
 .skill-toast-ul > div > ul {
     font-size: 0.9em;
 }
@@ -379,49 +383,72 @@ button {
     font-size: 20px;
     color: #fff;
 }
-
 .project-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.project-modal.show {
-  opacity: 1;
-}
-
-.project-modal-content {
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.project-modal.show .project-modal-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.close-project-modal {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .project-modal.show {
+    opacity: 1;
+  }
+  
+  .project-modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .project-modal.show .project-modal-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .close-project-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .close-project-modal:hover {
+    color: #333;
+  }
+  
+  .project-modal-content strong {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .project-modal-content a {
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .project-modal-content a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
 
 @media screen and (max-width : 760px) {
 

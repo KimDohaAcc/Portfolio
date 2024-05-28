@@ -99,8 +99,9 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
     const articleContainer = document.createElement("article")
 
     articleContainer.style.display = "flex";
-    articleContainer.style.flexFlow = "wrap row";
+    articleContainer.style.flexDirection = "row";
     articleContainer.style.alignItems = "space-around";
+    articleContainer.style.marginBottom = "50px"
 
     const article = document.createElement("div");
     const info = document.createElement("h6");
@@ -415,7 +416,7 @@ const Portfolio = new Project(
     ['Vanila JS'],
     ['None'],
     ['None'],
-    ['html', 'css'],
+    ['HTML5', 'CSS3'],
     ["1997.04.10", "2099.04.10"],
     "https://doha-portfolio.site/",
     "🙋‍♀️",
