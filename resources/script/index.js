@@ -413,7 +413,7 @@ const Portfolio = new Project(
     "Portfolio",
     "김도하의 포트폴리오",
     "상시 업데이트 중",
-    ['Vanila JS'],
+    ['Vanilla JS'],
     ['None'],
     ['None'],
     ['HTML5', 'CSS3'],
